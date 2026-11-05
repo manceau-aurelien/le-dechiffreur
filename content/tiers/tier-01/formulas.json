@@ -1,0 +1,405 @@
+[
+ {
+  "id": "f.be",
+  "title": "La Formule d'Être",
+  "pattern": "Sujet + am / is / are + complément",
+  "ruleText": "I am. He, she, it is. You, we, they are. À l'oral, on contracte : I'm, he's, you're… Devant un métier ou une chose au singulier, on ajoute a, ou an devant un son de voyelle. Attention : la faim, le froid et l'âge se disent avec be, pas avec have.",
+  "clueSentenceIds": [
+   "s.c01",
+   "s.c03",
+   "s.c04",
+   "s.c09"
+  ],
+  "hypothesis": {
+   "question": "Qu'est-ce qui explique ces phrases ?",
+   "options": [
+    {
+     "text": "Le verbe change selon le sujet : I am, he/she/it is, you/we/they are.",
+     "correct": true,
+     "why": "Tu l'as trouvé avant moi."
+    },
+    {
+     "text": "On met toujours is.",
+     "correct": false,
+     "why": "Regarde : I am, we are. Ce n'est pas toujours is."
+    },
+    {
+     "text": "La forme dépend du mot qui suit.",
+     "correct": false,
+     "why": "a teacher, a sailor… C'est le sujet qui décide, pas ce qui suit."
+    }
+   ]
+  },
+  "trial": {
+   "passMin": 5,
+   "positions": [
+    [
+     {
+      "type": "E10",
+      "id": "x.c01"
+     },
+     {
+      "type": "E10",
+      "id": "x.c02"
+     }
+    ],
+    [
+     {
+      "type": "E5",
+      "id": "s.c03"
+     },
+     {
+      "type": "E5",
+      "id": "s.c06"
+     }
+    ],
+    [
+     {
+      "type": "E6",
+      "id": "s.c09"
+     },
+     {
+      "type": "E6",
+      "id": "s.c15"
+     }
+    ],
+    [
+     {
+      "type": "E9",
+      "id": "x.p01"
+     },
+     {
+      "type": "E9",
+      "id": "x.p03"
+     }
+    ],
+    [
+     {
+      "type": "E5",
+      "id": "s.c02"
+     },
+     {
+      "type": "E5",
+      "id": "s.c04"
+     }
+    ],
+    [
+     {
+      "type": "E8",
+      "id": "s.c07"
+     },
+     {
+      "type": "E8",
+      "id": "s.c10"
+     },
+     {
+      "type": "E8",
+      "id": "s.c14"
+     }
+    ]
+   ]
+  },
+  "errorPatterns": [
+   {
+    "id": "be1",
+    "match": "\\bi (is|are)\\b",
+    "pourquoi": "Avec I, le verbe a sa propre forme.",
+    "aRetenir": "I am",
+    "blame": "f.be"
+   },
+   {
+    "id": "be2",
+    "match": "\\b(he|she|it) (am|are)\\b",
+    "pourquoi": "Avec he, she, it, le verbe est is.",
+    "aRetenir": "He is, she is, it is",
+    "blame": "f.be"
+   },
+   {
+    "id": "be3",
+    "match": "\\b(you|we|they) (am|is)\\b",
+    "pourquoi": "Avec you, we, they, le verbe est are.",
+    "aRetenir": "You are, we are, they are",
+    "blame": "f.be"
+   },
+   {
+    "id": "be4",
+    "match": "\\b(is|am|are) (doctor|teacher|sailor|artist|man|woman|friend)\\b",
+    "pourquoi": "En français, on dit « il est médecin ». L'anglais exige un article.",
+    "aRetenir": "He is a doctor",
+    "blame": "t.03"
+   },
+   {
+    "id": "be5",
+    "match": "\\ban (doctor|teacher|sailor|friend|man|woman|key|bag|car|coin|chair|library|station|door|ship)\\b",
+    "pourquoi": "Ce mot commence par un son de consonne.",
+    "aRetenir": "a devant consonne",
+    "blame": "f.be"
+   },
+   {
+    "id": "be6",
+    "match": "\\ba artist\\b",
+    "pourquoi": "Artist commence par un son de voyelle.",
+    "aRetenir": "an artist",
+    "blame": "f.be"
+   },
+   {
+    "id": "be7",
+    "match": "\\b(have|has)\\b",
+    "pourquoi": "La faim, le froid et l'âge se disent avec be.",
+    "aRetenir": "I am hungry, she is ten",
+    "blame": "t.01"
+   }
+  ]
+ },
+ {
+  "id": "f.not",
+  "title": "La Formule du Non",
+  "pattern": "Sujet + am / is / are + not",
+  "ruleText": "Not se place juste après am, is, are. On contracte is not en isn't et are not en aren't. Amn't n'existe pas : on dit I'm not.",
+  "clueSentenceIds": [
+   "s.c40",
+   "s.c42",
+   "s.c45",
+   "s.c44"
+  ],
+  "hypothesis": {
+   "question": "Où va la négation ?",
+   "options": [
+    {
+     "text": "Not vient juste après am, is, are.",
+     "correct": true,
+     "why": "C'est plus simple que notre « ne… pas »."
+    },
+    {
+     "text": "Not se met devant le verbe, comme « ne ».",
+     "correct": false,
+     "why": "Moi aussi, j'y ai cru. Mais on dit He is not, pas He not is."
+    },
+    {
+     "text": "On remplace le verbe par no.",
+     "correct": false,
+     "why": "No répond à une question. Il ne nie pas un verbe."
+    }
+   ]
+  },
+  "trial": {
+   "passMin": 5,
+   "positions": [
+    [
+     {
+      "type": "E10",
+      "id": "x.c03"
+     },
+     {
+      "type": "E10",
+      "id": "x.c04"
+     }
+    ],
+    [
+     {
+      "type": "E5",
+      "id": "s.c43"
+     },
+     {
+      "type": "E5",
+      "id": "s.c46"
+     }
+    ],
+    [
+     {
+      "type": "E6",
+      "id": "s.c47"
+     },
+     {
+      "type": "E6",
+      "id": "s.c49"
+     }
+    ],
+    [
+     {
+      "type": "E9",
+      "id": "x.p13"
+     }
+    ],
+    [
+     {
+      "type": "E5",
+      "id": "s.c41"
+     },
+     {
+      "type": "E5",
+      "id": "s.c48"
+     }
+    ],
+    [
+     {
+      "type": "E8",
+      "id": "s.c50"
+     },
+     {
+      "type": "E8",
+      "id": "s.c51"
+     }
+    ]
+   ]
+  },
+  "errorPatterns": [
+   {
+    "id": "no1",
+    "match": "\\b(i|you|he|she|it|we|they) not (am|is|are)\\b",
+    "pourquoi": "Not se place après le verbe, pas devant.",
+    "aRetenir": "He is not late",
+    "blame": "f.not"
+   },
+   {
+    "id": "no2",
+    "match": "\\bamn't\\b",
+    "pourquoi": "Cette contraction n'existe pas.",
+    "aRetenir": "I'm not",
+    "blame": "t.13"
+   },
+   {
+    "id": "no3",
+    "match": "\\b(am|is|are) no\\b",
+    "pourquoi": "No répond à une question. Pour nier un verbe, on utilise not.",
+    "aRetenir": "She is not late",
+    "blame": "f.not"
+   },
+   {
+    "id": "no4",
+    "match": "\\b(don't|doesn't)\\b",
+    "pourquoi": "Avec be, pas besoin de do : not suffit.",
+    "aRetenir": "He isn't French",
+    "blame": "f.not"
+   }
+  ]
+ },
+ {
+  "id": "f.q",
+  "title": "La Formule de la Question",
+  "pattern": "(Mot interrogatif) + am / is / are + sujet",
+  "ruleText": "Pour poser une question, le verbe passe devant le sujet : She is → Is she? Le mot interrogatif se place en tête : Where is she? Pour répondre court, on reprend le verbe sans contraction : Yes, she is. No, she isn't.",
+  "clueSentenceIds": [
+   "s.c62",
+   "s.c63",
+   "s.c68",
+   "s.c70"
+  ],
+  "hypothesis": {
+   "question": "Comment l'anglais pose-t-il une question ?",
+   "options": [
+    {
+     "text": "Le verbe passe devant le sujet, et le mot interrogatif se met en tête.",
+     "correct": true,
+     "why": "Exactement : Is he…? Where is he?"
+    },
+    {
+     "text": "On garde le même ordre et on monte la voix.",
+     "correct": false,
+     "why": "Ça arrive à l'oral, mais ce n'est pas la règle de base."
+    },
+    {
+     "text": "On ajoute is à la fin de la phrase.",
+     "correct": false,
+     "why": "Is passe devant le sujet, il ne finit pas la phrase."
+    }
+   ]
+  },
+  "trial": {
+   "passMin": 5,
+   "positions": [
+    [
+     {
+      "type": "E10",
+      "id": "x.c05"
+     },
+     {
+      "type": "E10",
+      "id": "x.c06"
+     }
+    ],
+    [
+     {
+      "type": "E5",
+      "id": "s.c64"
+     },
+     {
+      "type": "E5",
+      "id": "s.c65"
+     }
+    ],
+    [
+     {
+      "type": "E6",
+      "id": "s.c66"
+     },
+     {
+      "type": "E6",
+      "id": "s.c69"
+     }
+    ],
+    [
+     {
+      "type": "E9",
+      "id": "x.p15"
+     },
+     {
+      "type": "E9",
+      "id": "x.p16"
+     }
+    ],
+    [
+     {
+      "type": "E10",
+      "id": "x.c07"
+     },
+     {
+      "type": "E5",
+      "id": "s.c71"
+     }
+    ],
+    [
+     {
+      "type": "E8",
+      "id": "s.c78"
+     },
+     {
+      "type": "E8",
+      "id": "s.c76"
+     }
+    ]
+   ]
+  },
+  "errorPatterns": [
+   {
+    "id": "q4",
+    "match": "\\bhow .*call",
+    "pourquoi": "L'anglais demande le nom : pas de « comment ».",
+    "aRetenir": "What is your name?",
+    "blame": "t.15"
+   },
+   {
+    "id": "q1",
+    "match": "^(where|who|what|how) (i|you|he|she|it|we|they|the|my|your)\\b",
+    "pourquoi": "Après le mot interrogatif, le verbe passe d'abord.",
+    "aRetenir": "Where is she?",
+    "blame": "f.q"
+   },
+   {
+    "id": "q2",
+    "match": "^(you|he|she|it|we|they) (is|are)\\b",
+    "onlyIfQuestion": true,
+    "pourquoi": "C'est une affirmation : pour questionner, le verbe passe devant.",
+    "aRetenir": "Is she late?",
+    "blame": "f.q"
+   },
+   {
+    "id": "q3",
+    "match": "\\b(yes|no) (he|she|it|we|they|you)('s|'re)$",
+    "pourquoi": "En fin de réponse courte, on ne contracte pas.",
+    "aRetenir": "Yes, she is",
+    "blame": "f.q"
+   }
+  ]
+ }
+]

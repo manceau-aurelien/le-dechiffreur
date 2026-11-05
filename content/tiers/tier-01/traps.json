@@ -1,0 +1,189 @@
+[
+ {
+  "id": "t.01",
+  "title": "Avoir faim",
+  "kind": "calque",
+  "fr": "J'ai faim.",
+  "en": "I am hungry.",
+  "lesson": "Avoir faim = be hungry.",
+  "exerciseIds": [
+   "x.p01"
+  ],
+  "linkedSentenceId": "s.c05"
+ },
+ {
+  "id": "t.02",
+  "title": "Avoir froid",
+  "kind": "calque",
+  "fr": "J'ai froid.",
+  "en": "I am cold.",
+  "lesson": "Avoir froid = be cold.",
+  "exerciseIds": [
+   "x.p02"
+  ]
+ },
+ {
+  "id": "t.03",
+  "title": "Le métier sans article",
+  "kind": "calque",
+  "fr": "Il est médecin.",
+  "en": "He is a doctor.",
+  "lesson": "Un métier prend a ou an.",
+  "exerciseIds": [
+   "x.p03"
+  ],
+  "linkedSentenceId": "s.c02"
+ },
+ {
+  "id": "t.04",
+  "title": "Faim ou colère",
+  "kind": "calque",
+  "fr": "Elle est en colère.",
+  "en": "She is angry.",
+  "lesson": "angry sans h, hungry avec h.",
+  "exerciseIds": [
+   "x.p04"
+  ],
+  "linkedSentenceId": "s.c07"
+ },
+ {
+  "id": "t.05",
+  "title": "L'âge",
+  "kind": "calque",
+  "fr": "Elle a dix ans.",
+  "en": "She is ten.",
+  "lesson": "L'âge se dit avec be.",
+  "exerciseIds": [
+   "x.p05"
+  ],
+  "linkedSentenceId": "s.c21"
+ },
+ {
+  "id": "t.06",
+  "title": "Être en retard",
+  "kind": "calque",
+  "fr": "Il est en retard.",
+  "en": "He is late.",
+  "lesson": "Être en retard = be late.",
+  "exerciseIds": [
+   "x.p06"
+  ]
+ },
+ {
+  "id": "t.07",
+  "title": "Car",
+  "kind": "false_friend",
+  "fr": "The car is here.",
+  "en": "La voiture est ici.",
+  "lesson": "car = voiture.",
+  "exerciseIds": [
+   "x.p07"
+  ]
+ },
+ {
+  "id": "t.08",
+  "title": "Library",
+  "kind": "false_friend",
+  "fr": "The library is here.",
+  "en": "La bibliothèque est ici.",
+  "lesson": "library = bibliothèque.",
+  "exerciseIds": [
+   "x.p08"
+  ]
+ },
+ {
+  "id": "t.09",
+  "title": "Chair",
+  "kind": "false_friend",
+  "fr": "It is a chair.",
+  "en": "C'est une chaise.",
+  "lesson": "chair = chaise.",
+  "exerciseIds": [
+   "x.p09"
+  ],
+  "linkedSentenceId": "s.c30"
+ },
+ {
+  "id": "t.10",
+  "title": "Coin",
+  "kind": "false_friend",
+  "fr": "It is a coin.",
+  "en": "C'est une pièce de monnaie.",
+  "lesson": "coin = pièce de monnaie.",
+  "exerciseIds": [
+   "x.p10"
+  ],
+  "linkedSentenceId": "s.c31"
+ },
+ {
+  "id": "t.11",
+  "title": "Sensible",
+  "kind": "false_friend",
+  "fr": "She is sensible.",
+  "en": "Elle est raisonnable.",
+  "lesson": "sensible = raisonnable.",
+  "exerciseIds": [
+   "x.p11"
+  ],
+  "linkedSentenceId": "s.c33"
+ },
+ {
+  "id": "t.12",
+  "title": "Four",
+  "kind": "false_friend",
+  "fr": "He is four.",
+  "en": "Il a quatre ans.",
+  "lesson": "four = quatre, et l'âge se dit avec be.",
+  "exerciseIds": [
+   "x.p12"
+  ],
+  "linkedSentenceId": "s.c34"
+ },
+ {
+  "id": "t.13",
+  "title": "I'm not",
+  "kind": "calque",
+  "fr": "Je ne suis pas en retard.",
+  "en": "I'm not late.",
+  "lesson": "I'm not, jamais I amn't.",
+  "exerciseIds": [
+   "x.p13"
+  ]
+ },
+ {
+  "id": "t.14",
+  "title": "Se présenter",
+  "kind": "calque",
+  "fr": "Je m'appelle Tom.",
+  "en": "My name is Tom.",
+  "lesson": "Se présenter = My name is…",
+  "exerciseIds": [
+   "x.p14"
+  ],
+  "linkedSentenceId": "s.c57"
+ },
+ {
+  "id": "t.15",
+  "title": "Demander le nom",
+  "kind": "calque",
+  "fr": "Comment t'appelles-tu ?",
+  "en": "What is your name?",
+  "lesson": "Demander le nom = What is your name?",
+  "exerciseIds": [
+   "x.p15"
+  ],
+  "linkedSentenceId": "s.c72"
+ },
+ {
+  "id": "t.16",
+  "title": "Prendre des nouvelles",
+  "kind": "calque",
+  "fr": "Comment vas-tu ?",
+  "en": "How are you?",
+  "lesson": "Prendre des nouvelles = How are you?",
+  "exerciseIds": [
+   "x.p16"
+  ],
+  "linkedSentenceId": "s.c74"
+ }
+]

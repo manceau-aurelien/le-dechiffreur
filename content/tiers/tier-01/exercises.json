@@ -1,0 +1,879 @@
+[
+ {
+  "id": "x.p01",
+  "type": "E9",
+  "targets": [
+   "t.01"
+  ],
+  "prompt": "J'ai faim.",
+  "audioText": "I am hungry.",
+  "options": [
+   {
+    "text": "I am hungry.",
+    "correct": true
+   },
+   {
+    "text": "I have hunger.",
+    "correct": false,
+    "pourquoi": "Calque du français.",
+    "aRetenir": "Avoir faim = be hungry."
+   },
+   {
+    "text": "I is hungry.",
+    "correct": false,
+    "pourquoi": "Avec I, c'est am.",
+    "aRetenir": "Avoir faim = be hungry."
+   }
+  ]
+ },
+ {
+  "id": "x.p02",
+  "type": "E9",
+  "targets": [
+   "t.02"
+  ],
+  "prompt": "J'ai froid.",
+  "audioText": "I am cold.",
+  "options": [
+   {
+    "text": "I am cold.",
+    "correct": true
+   },
+   {
+    "text": "I have cold.",
+    "correct": false,
+    "pourquoi": "Calque.",
+    "aRetenir": "Avoir froid = be cold."
+   },
+   {
+    "text": "It is cold.",
+    "correct": false,
+    "pourquoi": "Cela veut dire « il fait froid ».",
+    "aRetenir": "Avoir froid = be cold."
+   }
+  ]
+ },
+ {
+  "id": "x.p03",
+  "type": "E9",
+  "targets": [
+   "t.03"
+  ],
+  "prompt": "Il est médecin.",
+  "audioText": "He is a doctor.",
+  "options": [
+   {
+    "text": "He is a doctor.",
+    "correct": true
+   },
+   {
+    "text": "He is doctor.",
+    "correct": false,
+    "pourquoi": "Il manque a.",
+    "aRetenir": "Un métier prend a ou an."
+   },
+   {
+    "text": "He is the doctor.",
+    "correct": false,
+    "pourquoi": "« C'est le médecin », un médecin précis.",
+    "aRetenir": "Un métier prend a ou an."
+   }
+  ]
+ },
+ {
+  "id": "x.p04",
+  "type": "E9",
+  "targets": [
+   "t.04"
+  ],
+  "prompt": "Elle est en colère.",
+  "audioText": "She is angry.",
+  "options": [
+   {
+    "text": "She is angry.",
+    "correct": true
+   },
+   {
+    "text": "She is hungry.",
+    "correct": false,
+    "pourquoi": "Cela veut dire qu'elle a faim.",
+    "aRetenir": "angry sans h, hungry avec h."
+   },
+   {
+    "text": "She is in anger.",
+    "correct": false,
+    "pourquoi": "Calque.",
+    "aRetenir": "angry sans h, hungry avec h."
+   }
+  ]
+ },
+ {
+  "id": "x.p05",
+  "type": "E9",
+  "targets": [
+   "t.05"
+  ],
+  "prompt": "Elle a dix ans.",
+  "audioText": "She is ten.",
+  "options": [
+   {
+    "text": "She is ten.",
+    "correct": true
+   },
+   {
+    "text": "She has ten years.",
+    "correct": false,
+    "pourquoi": "Calque.",
+    "aRetenir": "L'âge se dit avec be."
+   },
+   {
+    "text": "She is ten years.",
+    "correct": false,
+    "pourquoi": "Il faudrait ajouter old, ou tout enlever.",
+    "aRetenir": "L'âge se dit avec be."
+   }
+  ]
+ },
+ {
+  "id": "x.p06",
+  "type": "E9",
+  "targets": [
+   "t.06"
+  ],
+  "prompt": "Il est en retard.",
+  "audioText": "He is late.",
+  "options": [
+   {
+    "text": "He is late.",
+    "correct": true
+   },
+   {
+    "text": "He is in delay.",
+    "correct": false,
+    "pourquoi": "Calque mot à mot.",
+    "aRetenir": "Être en retard = be late."
+   },
+   {
+    "text": "He has late.",
+    "correct": false,
+    "pourquoi": "Pas de have ici.",
+    "aRetenir": "Être en retard = be late."
+   }
+  ]
+ },
+ {
+  "id": "x.p07",
+  "type": "E9",
+  "targets": [
+   "t.07"
+  ],
+  "prompt": "The car is here.",
+  "audioText": "The car is here.",
+  "options": [
+   {
+    "text": "La voiture est ici.",
+    "correct": true
+   },
+   {
+    "text": "Le car est ici.",
+    "correct": false,
+    "pourquoi": "Un autocar se dit bus ou coach.",
+    "aRetenir": "car = voiture."
+   },
+   {
+    "text": "La carte est ici.",
+    "correct": false,
+    "pourquoi": "Une carte se dit card ou map.",
+    "aRetenir": "car = voiture."
+   }
+  ]
+ },
+ {
+  "id": "x.p08",
+  "type": "E9",
+  "targets": [
+   "t.08"
+  ],
+  "prompt": "The library is here.",
+  "audioText": "The library is here.",
+  "options": [
+   {
+    "text": "La bibliothèque est ici.",
+    "correct": true
+   },
+   {
+    "text": "La librairie est ici.",
+    "correct": false,
+    "pourquoi": "On la dit bookshop.",
+    "aRetenir": "library = bibliothèque."
+   },
+   {
+    "text": "La liberté est ici.",
+    "correct": false,
+    "pourquoi": "Liberty est un autre mot.",
+    "aRetenir": "library = bibliothèque."
+   }
+  ]
+ },
+ {
+  "id": "x.p09",
+  "type": "E9",
+  "targets": [
+   "t.09"
+  ],
+  "prompt": "It is a chair.",
+  "audioText": "It is a chair.",
+  "options": [
+   {
+    "text": "C'est une chaise.",
+    "correct": true
+   },
+   {
+    "text": "C'est de la chair.",
+    "correct": false,
+    "pourquoi": "Se dit flesh.",
+    "aRetenir": "chair = chaise."
+   },
+   {
+    "text": "C'est une chaire.",
+    "correct": false,
+    "pourquoi": "Rien à voir.",
+    "aRetenir": "chair = chaise."
+   }
+  ]
+ },
+ {
+  "id": "x.p10",
+  "type": "E9",
+  "targets": [
+   "t.10"
+  ],
+  "prompt": "It is a coin.",
+  "audioText": "It is a coin.",
+  "options": [
+   {
+    "text": "C'est une pièce de monnaie.",
+    "correct": true
+   },
+   {
+    "text": "C'est un coin.",
+    "correct": false,
+    "pourquoi": "Se dit corner.",
+    "aRetenir": "coin = pièce de monnaie."
+   },
+   {
+    "text": "C'est un coing.",
+    "correct": false,
+    "pourquoi": "Le fruit se dit quince.",
+    "aRetenir": "coin = pièce de monnaie."
+   }
+  ]
+ },
+ {
+  "id": "x.p11",
+  "type": "E9",
+  "targets": [
+   "t.11"
+  ],
+  "prompt": "She is sensible.",
+  "audioText": "She is sensible.",
+  "options": [
+   {
+    "text": "Elle est raisonnable.",
+    "correct": true
+   },
+   {
+    "text": "Elle est sensible.",
+    "correct": false,
+    "pourquoi": "Se dit sensitive.",
+    "aRetenir": "sensible = raisonnable."
+   },
+   {
+    "text": "Elle est sensationnelle.",
+    "correct": false,
+    "pourquoi": "Se dit amazing.",
+    "aRetenir": "sensible = raisonnable."
+   }
+  ]
+ },
+ {
+  "id": "x.p12",
+  "type": "E9",
+  "targets": [
+   "t.12"
+  ],
+  "prompt": "He is four.",
+  "audioText": "He is four.",
+  "options": [
+   {
+    "text": "Il a quatre ans.",
+    "correct": true
+   },
+   {
+    "text": "Il est au four.",
+    "correct": false,
+    "pourquoi": "Four est un nombre ici.",
+    "aRetenir": "four = quatre, et l'âge se dit avec be."
+   },
+   {
+    "text": "Il a quatorze ans.",
+    "correct": false,
+    "pourquoi": "Se dit fourteen.",
+    "aRetenir": "four = quatre, et l'âge se dit avec be."
+   }
+  ]
+ },
+ {
+  "id": "x.p13",
+  "type": "E9",
+  "targets": [
+   "t.13"
+  ],
+  "prompt": "Je ne suis pas en retard.",
+  "audioText": "I'm not late.",
+  "options": [
+   {
+    "text": "I'm not late.",
+    "correct": true
+   },
+   {
+    "text": "I amn't late.",
+    "correct": false,
+    "pourquoi": "Cette contraction n'existe pas.",
+    "aRetenir": "I'm not, jamais I amn't."
+   },
+   {
+    "text": "I not am late.",
+    "correct": false,
+    "pourquoi": "Not vient après le verbe.",
+    "aRetenir": "I'm not, jamais I amn't."
+   }
+  ]
+ },
+ {
+  "id": "x.p14",
+  "type": "E9",
+  "targets": [
+   "t.14"
+  ],
+  "prompt": "Je m'appelle Tom.",
+  "audioText": "My name is Tom.",
+  "options": [
+   {
+    "text": "My name is Tom.",
+    "correct": true
+   },
+   {
+    "text": "I call me Tom.",
+    "correct": false,
+    "pourquoi": "Calque du français.",
+    "aRetenir": "Se présenter = My name is…"
+   },
+   {
+    "text": "I am call Tom.",
+    "correct": false,
+    "pourquoi": "Pas de cette construction.",
+    "aRetenir": "Se présenter = My name is…"
+   }
+  ]
+ },
+ {
+  "id": "x.p15",
+  "type": "E9",
+  "targets": [
+   "t.15"
+  ],
+  "prompt": "Comment t'appelles-tu ?",
+  "audioText": "What is your name?",
+  "options": [
+   {
+    "text": "What is your name?",
+    "correct": true
+   },
+   {
+    "text": "How you call?",
+    "correct": false,
+    "pourquoi": "Calque de « comment ».",
+    "aRetenir": "Demander le nom = What is your name?"
+   },
+   {
+    "text": "How are you?",
+    "correct": false,
+    "pourquoi": "Cela demande comment tu vas.",
+    "aRetenir": "Demander le nom = What is your name?"
+   }
+  ]
+ },
+ {
+  "id": "x.p16",
+  "type": "E9",
+  "targets": [
+   "t.16"
+  ],
+  "prompt": "Comment vas-tu ?",
+  "audioText": "How are you?",
+  "options": [
+   {
+    "text": "How are you?",
+    "correct": true
+   },
+   {
+    "text": "How do you go?",
+    "correct": false,
+    "pourquoi": "Calque.",
+    "aRetenir": "Prendre des nouvelles = How are you?"
+   },
+   {
+    "text": "Where are you?",
+    "correct": false,
+    "pourquoi": "Cela demande où tu es.",
+    "aRetenir": "Prendre des nouvelles = How are you?"
+   }
+  ]
+ },
+ {
+  "id": "x.c01",
+  "type": "E10",
+  "targets": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "tokens": [
+   "I",
+   "is",
+   "hungry."
+  ],
+  "wrongIndex": 1,
+  "replacements": [
+   "am",
+   "are",
+   "be"
+  ],
+  "correct": "am",
+  "pourquoi": "Avec I, la forme est am.",
+  "aRetenir": "I am",
+  "audioText": "I am hungry."
+ },
+ {
+  "id": "x.c02",
+  "type": "E10",
+  "targets": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "tokens": [
+   "They",
+   "is",
+   "tired."
+  ],
+  "wrongIndex": 1,
+  "replacements": [
+   "are",
+   "am",
+   "be"
+  ],
+  "correct": "are",
+  "pourquoi": "Avec they, la forme est are.",
+  "aRetenir": "They are",
+  "audioText": "They are tired."
+ },
+ {
+  "id": "x.c03",
+  "type": "E10",
+  "targets": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "tokens": [
+   "He",
+   "is",
+   "no",
+   "late."
+  ],
+  "wrongIndex": 2,
+  "replacements": [
+   "not",
+   "isn't",
+   "yes"
+  ],
+  "correct": "not",
+  "pourquoi": "No répond à une question. Pour nier, on utilise not.",
+  "aRetenir": "He is not late",
+  "audioText": "He is not late."
+ },
+ {
+  "id": "x.c04",
+  "type": "E10",
+  "targets": [
+   "t.13"
+  ],
+  "minNodeId": "n.1.09",
+  "tokens": [
+   "I",
+   "amn't",
+   "late."
+  ],
+  "wrongIndex": 1,
+  "replacements": [
+   "am not",
+   "isn't",
+   "aren't"
+  ],
+  "correct": "am not",
+  "pourquoi": "Amn't n'existe pas.",
+  "aRetenir": "I am not, I'm not",
+  "audioText": "I am not late."
+ },
+ {
+  "id": "x.c05",
+  "type": "E10",
+  "targets": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "tokens": [
+   "Where",
+   "are",
+   "the",
+   "station?"
+  ],
+  "wrongIndex": 1,
+  "replacements": [
+   "is",
+   "am",
+   "it"
+  ],
+  "correct": "is",
+  "pourquoi": "The station est au singulier.",
+  "aRetenir": "Where is the station?",
+  "audioText": "Where is the station?"
+ },
+ {
+  "id": "x.c06",
+  "type": "E10",
+  "targets": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "tokens": [
+   "Who",
+   "are",
+   "she?"
+  ],
+  "wrongIndex": 1,
+  "replacements": [
+   "is",
+   "am",
+   "he"
+  ],
+  "correct": "is",
+  "pourquoi": "Avec she, c'est toujours is, même en question.",
+  "aRetenir": "Who is she?",
+  "audioText": "Who is she?"
+ },
+ {
+  "id": "x.c07",
+  "type": "E10",
+  "targets": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "tokens": [
+   "Is",
+   "she",
+   "late?",
+   "Yes,",
+   "she's."
+  ],
+  "wrongIndex": 4,
+  "replacements": [
+   "she is.",
+   "she isn't.",
+   "he is."
+  ],
+  "correct": "she is.",
+  "pourquoi": "On ne contracte pas en fin de réponse courte.",
+  "aRetenir": "Yes, she is.",
+  "audioText": "Is she late? Yes, she is."
+ },
+ {
+  "id": "x.c08",
+  "type": "E10",
+  "targets": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "tokens": [
+   "She",
+   "is",
+   "a",
+   "artist."
+  ],
+  "wrongIndex": 2,
+  "replacements": [
+   "an",
+   "the",
+   "is"
+  ],
+  "correct": "an",
+  "pourquoi": "Artist commence par un son de voyelle.",
+  "aRetenir": "an artist",
+  "audioText": "She is an artist."
+ },
+ {
+  "id": "x.c09",
+  "type": "E10",
+  "targets": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.07",
+  "tokens": [
+   "It",
+   "is",
+   "an",
+   "key."
+  ],
+  "wrongIndex": 2,
+  "replacements": [
+   "a",
+   "the",
+   "is"
+  ],
+  "correct": "a",
+  "pourquoi": "Key commence par un son de consonne.",
+  "aRetenir": "a key",
+  "audioText": "It is a key."
+ },
+ {
+  "id": "x.r01",
+  "type": "E11",
+  "targets": [
+   "b.angry",
+   "b.she"
+  ],
+  "minNodeId": "n.1.05",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c07",
+  "options": [
+   {
+    "text": "Elle est en colère.",
+    "correct": true
+   },
+   {
+    "text": "Elle a faim.",
+    "correct": false,
+    "pourquoi": "Hungry a un h soufflé.",
+    "aRetenir": "She is angry = elle est en colère."
+   },
+   {
+    "text": "Il est en colère.",
+    "correct": false,
+    "pourquoi": "She = elle.",
+    "aRetenir": "She is angry = elle est en colère."
+   }
+  ]
+ },
+ {
+  "id": "x.r02",
+  "type": "E11",
+  "targets": [
+   "b.we",
+   "b.tired"
+  ],
+  "minNodeId": "n.1.05",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c84",
+  "options": [
+   {
+    "text": "Nous sommes fatigués.",
+    "correct": true
+   },
+   {
+    "text": "Ils sont fatigués.",
+    "correct": false,
+    "pourquoi": "We = nous, they = ils.",
+    "aRetenir": "We are tired = nous sommes fatigués."
+   },
+   {
+    "text": "Nous sommes heureux.",
+    "correct": false,
+    "pourquoi": "Happy = heureux.",
+    "aRetenir": "We are tired = nous sommes fatigués."
+   }
+  ]
+ },
+ {
+  "id": "x.r03",
+  "type": "E11",
+  "targets": [
+   "b.he",
+   "b.ten"
+  ],
+  "minNodeId": "n.1.06",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c21",
+  "options": [
+   {
+    "text": "Il a dix ans.",
+    "correct": true
+   },
+   {
+    "text": "Elle a dix ans.",
+    "correct": false,
+    "pourquoi": "He = il.",
+    "aRetenir": "He is ten = il a dix ans."
+   },
+   {
+    "text": "Il est dix heures.",
+    "correct": false,
+    "pourquoi": "L'heure ne se dit pas ainsi.",
+    "aRetenir": "He is ten = il a dix ans."
+   }
+  ]
+ },
+ {
+  "id": "x.r04",
+  "type": "E11",
+  "targets": [
+   "f.not",
+   "b.hungry"
+  ],
+  "minNodeId": "n.1.09",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c43",
+  "options": [
+   {
+    "text": "Elle n'a pas faim.",
+    "correct": true
+   },
+   {
+    "text": "Elle a faim.",
+    "correct": false,
+    "pourquoi": "Isn't marque la négation.",
+    "aRetenir": "She isn't hungry = elle n'a pas faim."
+   },
+   {
+    "text": "Elle n'est pas en colère.",
+    "correct": false,
+    "pourquoi": "Hungry n'est pas angry.",
+    "aRetenir": "She isn't hungry = elle n'a pas faim."
+   }
+  ]
+ },
+ {
+  "id": "x.r05",
+  "type": "E11",
+  "targets": [
+   "b.key",
+   "b.here"
+  ],
+  "minNodeId": "n.1.10",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c52",
+  "options": [
+   {
+    "text": "La clé est ici.",
+    "correct": true
+   },
+   {
+    "text": "La clé est là-bas.",
+    "correct": false,
+    "pourquoi": "Here = ici, there = là-bas.",
+    "aRetenir": "The key is here = la clé est ici."
+   },
+   {
+    "text": "La porte est ici.",
+    "correct": false,
+    "pourquoi": "Door = porte.",
+    "aRetenir": "The key is here = la clé est ici."
+   }
+  ]
+ },
+ {
+  "id": "x.r06",
+  "type": "E11",
+  "targets": [
+   "b.my",
+   "b.friend"
+  ],
+  "minNodeId": "n.1.10",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c55",
+  "options": [
+   {
+    "text": "C'est mon ami.",
+    "correct": true
+   },
+   {
+    "text": "C'est ton ami.",
+    "correct": false,
+    "pourquoi": "My = mon, your = ton.",
+    "aRetenir": "This is my friend = c'est mon ami."
+   },
+   {
+    "text": "C'est un médecin.",
+    "correct": false,
+    "pourquoi": "Doctor = médecin.",
+    "aRetenir": "This is my friend = c'est mon ami."
+   }
+  ]
+ },
+ {
+  "id": "x.r07",
+  "type": "E11",
+  "targets": [
+   "b.where",
+   "b.station"
+  ],
+  "minNodeId": "n.1.12",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c68",
+  "options": [
+   {
+    "text": "Où est la gare ?",
+    "correct": true
+   },
+   {
+    "text": "Qui est à la gare ?",
+    "correct": false,
+    "pourquoi": "Who = qui.",
+    "aRetenir": "Where is the station? = où est la gare ?"
+   },
+   {
+    "text": "La gare est ici.",
+    "correct": false,
+    "pourquoi": "C'est une question.",
+    "aRetenir": "Where is the station? = où est la gare ?"
+   }
+  ]
+ },
+ {
+  "id": "x.r08",
+  "type": "E11",
+  "targets": [
+   "b.how",
+   "t.16"
+  ],
+  "minNodeId": "n.1.12",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.c74",
+  "options": [
+   {
+    "text": "Comment vas-tu ?",
+    "correct": true
+   },
+   {
+    "text": "Où es-tu ?",
+    "correct": false,
+    "pourquoi": "Where = où.",
+    "aRetenir": "How are you? = comment vas-tu ?"
+   },
+   {
+    "text": "Qui es-tu ?",
+    "correct": false,
+    "pourquoi": "Who = qui.",
+    "aRetenir": "How are you? = comment vas-tu ?"
+   }
+  ]
+ }
+]

@@ -1,0 +1,1342 @@
+[
+ {
+  "id": "s.c80",
+  "en": "Thank you, goodbye.",
+  "fr": "Merci, au revoir.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.thank-you",
+   "b.goodbye"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.1.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c81",
+  "en": "Yes, please.",
+  "fr": "Oui, s'il te plaît.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.yes",
+   "b.please"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.1.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c82",
+  "en": "No, thank you.",
+  "fr": "Non, merci.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.no",
+   "b.thank-you"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.1.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c01",
+  "en": "I am a teacher.",
+  "fr": "Je suis professeur.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.am",
+   "b.a",
+   "b.teacher"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c02",
+  "en": "You are a doctor.",
+  "fr": "Tu es médecin.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.you",
+   "b.are",
+   "b.a",
+   "b.doctor"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c03",
+  "en": "He is a sailor.",
+  "fr": "Il est marin.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.he",
+   "b.is",
+   "b.a",
+   "b.sailor"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c04",
+  "en": "She is an artist.",
+  "fr": "Elle est artiste.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.she",
+   "b.is",
+   "b.an",
+   "b.artist"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c05",
+  "en": "I am hungry.",
+  "fr": "J'ai faim.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.am",
+   "b.hungry"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c06",
+  "en": "You are tired.",
+  "fr": "Tu es fatigué.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.you",
+   "b.are",
+   "b.tired"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c07",
+  "en": "She is angry.",
+  "fr": "Elle est en colère.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.she",
+   "b.is",
+   "b.angry"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c08",
+  "en": "He is cold.",
+  "fr": "Il a froid.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.he",
+   "b.is",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c09",
+  "en": "We are happy.",
+  "fr": "Nous sommes heureux.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.we",
+   "b.are",
+   "b.happy"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c10",
+  "en": "They are tired.",
+  "fr": "Ils sont fatigués.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.they",
+   "b.are",
+   "b.tired"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c11",
+  "en": "It is cold.",
+  "fr": "Il fait froid.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c12",
+  "en": "I'm a doctor.",
+  "fr": "Je suis médecin.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.im",
+   "b.a",
+   "b.doctor"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c13",
+  "en": "She's happy.",
+  "fr": "Elle est heureuse.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.shes",
+   "b.happy"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c14",
+  "en": "We're cold.",
+  "fr": "Nous avons froid.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.were",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c15",
+  "en": "They're angry.",
+  "fr": "Ils sont en colère.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.theyre",
+   "b.angry"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c16",
+  "en": "You're a friend.",
+  "fr": "Tu es un ami.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.youre",
+   "b.a",
+   "b.friend"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c17",
+  "en": "He's a man.",
+  "fr": "C'est un homme.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.hes",
+   "b.a",
+   "b.man"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c18",
+  "en": "She is a woman.",
+  "fr": "C'est une femme.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.she",
+   "b.is",
+   "b.a",
+   "b.woman"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c79",
+  "en": "Hello, I am Tom.",
+  "fr": "Bonjour, je suis Tom.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.hello",
+   "b.i",
+   "b.am",
+   "b.tom"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c84",
+  "en": "We are tired.",
+  "fr": "Nous sommes fatigués.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.we",
+   "b.are",
+   "b.tired"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.05",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c19",
+  "en": "I am French.",
+  "fr": "Je suis français.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.am",
+   "b.french"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.06",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c20",
+  "en": "She is English.",
+  "fr": "Elle est anglaise.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.she",
+   "b.is",
+   "b.english"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.06",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c21",
+  "en": "He is ten.",
+  "fr": "Il a dix ans.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.he",
+   "b.is",
+   "b.ten"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.06",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c22",
+  "en": "I am twenty.",
+  "fr": "J'ai vingt ans.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.am",
+   "b.twenty"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.06",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c23",
+  "en": "We are late.",
+  "fr": "Nous sommes en retard.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.we",
+   "b.are",
+   "b.late"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.06",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c24",
+  "en": "You're late.",
+  "fr": "Tu es en retard.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.youre",
+   "b.late"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.06",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c25",
+  "en": "The ship is late.",
+  "fr": "Le navire est en retard.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.ship",
+   "b.is",
+   "b.late"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.07",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c26",
+  "en": "The door is cold.",
+  "fr": "La porte est froide.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.door",
+   "b.is",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.07",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c27",
+  "en": "It is a key.",
+  "fr": "C'est une clé.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.a",
+   "b.key"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.07",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c28",
+  "en": "It is a bag.",
+  "fr": "C'est un sac.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.a",
+   "b.bag"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.07",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c29",
+  "en": "It is a station.",
+  "fr": "C'est une gare.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.a",
+   "b.station"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.07",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c30",
+  "en": "It is a chair.",
+  "fr": "C'est une chaise.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.a",
+   "b.chair"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.08",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c31",
+  "en": "It is a coin.",
+  "fr": "C'est une pièce de monnaie.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.a",
+   "b.coin"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.08",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c32",
+  "en": "It is a car.",
+  "fr": "C'est une voiture.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.a",
+   "b.car"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.08",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c33",
+  "en": "She is sensible.",
+  "fr": "Elle est raisonnable.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.she",
+   "b.is",
+   "b.sensible"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.08",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c34",
+  "en": "He is four.",
+  "fr": "Il a quatre ans.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.he",
+   "b.is",
+   "b.four"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.08",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c35",
+  "en": "It is a library.",
+  "fr": "C'est une bibliothèque.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.a",
+   "b.library"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.08",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c40",
+  "en": "I am not late.",
+  "fr": "Je ne suis pas en retard.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.am",
+   "b.not",
+   "b.late"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c41",
+  "en": "You aren't a doctor.",
+  "fr": "Tu n'es pas médecin.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.you",
+   "b.arent",
+   "b.a",
+   "b.doctor"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c42",
+  "en": "He isn't French.",
+  "fr": "Il n'est pas français.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.he",
+   "b.isnt",
+   "b.french"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c43",
+  "en": "She isn't hungry.",
+  "fr": "Elle n'a pas faim.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.she",
+   "b.isnt",
+   "b.hungry"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c44",
+  "en": "It isn't a coin.",
+  "fr": "Ce n'est pas une pièce de monnaie.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.isnt",
+   "b.a",
+   "b.coin"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c45",
+  "en": "We aren't tired.",
+  "fr": "Nous ne sommes pas fatigués.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.we",
+   "b.arent",
+   "b.tired"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c46",
+  "en": "They aren't angry.",
+  "fr": "Ils ne sont pas en colère.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.they",
+   "b.arent",
+   "b.angry"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c47",
+  "en": "I'm not cold.",
+  "fr": "Je n'ai pas froid.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.im",
+   "b.not",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c48",
+  "en": "The ship isn't late.",
+  "fr": "Le navire n'est pas en retard.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.ship",
+   "b.isnt",
+   "b.late"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c49",
+  "en": "It isn't a chair.",
+  "fr": "Ce n'est pas une chaise.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.isnt",
+   "b.a",
+   "b.chair"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c50",
+  "en": "He isn't twenty.",
+  "fr": "Il n'a pas vingt ans.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.he",
+   "b.isnt",
+   "b.twenty"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c51",
+  "en": "The teacher isn't happy.",
+  "fr": "Le professeur n'est pas content.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.teacher",
+   "b.isnt",
+   "b.happy"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.09",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c52",
+  "en": "The key is here.",
+  "fr": "La clé est ici.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.key",
+   "b.is",
+   "b.here"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c53",
+  "en": "The ship is there.",
+  "fr": "Le navire est là-bas.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.ship",
+   "b.is",
+   "b.there"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c54",
+  "en": "The bag is in the car.",
+  "fr": "Le sac est dans la voiture.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.bag",
+   "b.is",
+   "b.in",
+   "b.the",
+   "b.car"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c55",
+  "en": "This is my friend.",
+  "fr": "C'est mon ami.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.this",
+   "b.is",
+   "b.my",
+   "b.friend"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c56",
+  "en": "This is a library.",
+  "fr": "C'est une bibliothèque.",
+  "acceptedEn": [
+   "It is a library."
+  ],
+  "bricks": [
+   "b.this",
+   "b.is",
+   "b.a",
+   "b.library"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c57",
+  "en": "My name is Tom.",
+  "fr": "Je m'appelle Tom.",
+  "acceptedEn": [
+   "I am Tom."
+  ],
+  "bricks": [
+   "b.my",
+   "b.name",
+   "b.is",
+   "b.tom"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c58",
+  "en": "Your bag is here.",
+  "fr": "Ton sac est ici.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.your",
+   "b.bag",
+   "b.is",
+   "b.here"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c59",
+  "en": "The key isn't in the bag.",
+  "fr": "La clé n'est pas dans le sac.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.key",
+   "b.isnt",
+   "b.in",
+   "b.the",
+   "b.bag"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c60",
+  "en": "I am hungry and I am cold.",
+  "fr": "J'ai faim et j'ai froid.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.am",
+   "b.hungry",
+   "b.and",
+   "b.i",
+   "b.am",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c61",
+  "en": "My friend is a sailor and she is English.",
+  "fr": "Mon amie est marin et elle est anglaise.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.my",
+   "b.friend",
+   "b.is",
+   "b.a",
+   "b.sailor",
+   "b.and",
+   "b.she",
+   "b.is",
+   "b.english"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.1.10",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c62",
+  "en": "Is he a doctor?",
+  "fr": "Est-il médecin ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.is",
+   "b.he",
+   "b.a",
+   "b.doctor"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c63",
+  "en": "Are you hungry?",
+  "fr": "As-tu faim ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.are",
+   "b.you",
+   "b.hungry"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c64",
+  "en": "Is she English?",
+  "fr": "Est-elle anglaise ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.is",
+   "b.she",
+   "b.english"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c65",
+  "en": "Are they here?",
+  "fr": "Sont-ils ici ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.are",
+   "b.they",
+   "b.here"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c66",
+  "en": "Is it a key?",
+  "fr": "Est-ce une clé ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.is",
+   "b.it",
+   "b.a",
+   "b.key"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c67",
+  "en": "Is the door cold?",
+  "fr": "La porte est-elle froide ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.is",
+   "b.the",
+   "b.door",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c68",
+  "en": "Where is the station?",
+  "fr": "Où est la gare ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.where",
+   "b.is",
+   "b.the",
+   "b.station"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c69",
+  "en": "Where are you?",
+  "fr": "Où es-tu ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.where",
+   "b.are",
+   "b.you"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c70",
+  "en": "Who is she?",
+  "fr": "Qui est-elle ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.who",
+   "b.is",
+   "b.she"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c71",
+  "en": "Who is this man?",
+  "fr": "Qui est cet homme ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.who",
+   "b.is",
+   "b.this",
+   "b.man"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c72",
+  "en": "What is your name?",
+  "fr": "Comment t'appelles-tu ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.what",
+   "b.is",
+   "b.your",
+   "b.name"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c73",
+  "en": "What is this?",
+  "fr": "Qu'est-ce que c'est ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.what",
+   "b.is",
+   "b.this"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c74",
+  "en": "How are you?",
+  "fr": "Comment vas-tu ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.how",
+   "b.are",
+   "b.you"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.c75",
+  "en": "Are you tired? Yes, I am.",
+  "fr": "Es-tu fatigué ? Oui, je le suis.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.are",
+   "b.you",
+   "b.tired",
+   "b.yes",
+   "b.i",
+   "b.am"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c76",
+  "en": "Is he late? No, he isn't.",
+  "fr": "Est-il en retard ? Non, il ne l'est pas.",
+  "acceptedEn": [
+   "Is he late? No, he is not."
+  ],
+  "bricks": [
+   "b.is",
+   "b.he",
+   "b.late",
+   "b.no",
+   "b.he",
+   "b.isnt"
+  ],
+  "formulaIds": [
+   "f.q",
+   "f.not"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c77",
+  "en": "Is the key in the bag? Yes, it is.",
+  "fr": "La clé est-elle dans le sac ? Oui, elle y est.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.is",
+   "b.the",
+   "b.key",
+   "b.in",
+   "b.the",
+   "b.bag",
+   "b.yes",
+   "b.it",
+   "b.is"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c78",
+  "en": "Where is my friend?",
+  "fr": "Où est mon ami ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.where",
+   "b.is",
+   "b.my",
+   "b.friend"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.c83",
+  "en": "Where is the station, please?",
+  "fr": "Où est la gare, s'il te plaît ?",
+  "acceptedEn": [
+   "Please, where is the station?"
+  ],
+  "bricks": [
+   "b.where",
+   "b.is",
+   "b.the",
+   "b.station",
+   "b.please"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.1.12",
+  "guardianAudio": false
+ }
+]

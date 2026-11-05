@@ -1,0 +1,6 @@
+{
+  "voiceA":   { "role": "Lecons (feminine, en-US)",  "sapi": { "name": "Microsoft Zira Desktop",  "pitch": "default" }, "azure": "en-US-JennyNeural" },
+  "voiceB":   { "role": "Lecons (masculine, en-US)", "sapi": { "name": "Microsoft David Desktop", "pitch": "default" }, "azure": "en-US-GuyNeural" },
+  "guardian": { "role": "Le Gardien (grave, en-US)", "sapi": { "name": "Microsoft David Desktop", "pitch": "low" },     "azure": "en-US-DavisNeural" },
+  "anna":     { "role": "Anna (feminine, en-US)",    "sapi": { "name": "Microsoft Zira Desktop",  "pitch": "default" }, "azure": "en-US-AriaNeural" }
+}

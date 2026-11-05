@@ -1,0 +1,1275 @@
+{
+ "id": "boss-01",
+ "tierId": "tier-01",
+ "title": "Le Gardien de la Porte",
+ "allowedErrors": 3,
+ "replaysPerRank": 2,
+ "slowTokens": 3,
+ "ranks": [
+  {
+   "order": 1,
+   "variants": [
+    {
+     "id": "v.1.01.a",
+     "audio": "hungry",
+     "fr": "qui a faim",
+     "tokens": [
+      "b.hungry"
+     ],
+     "distractors": [
+      "b.angry",
+      "b.happy"
+     ],
+     "pivotAlternatives": [
+      "angry"
+     ],
+     "pivotElements": [
+      "b.hungry"
+     ],
+     "aRetenir": "Hungry a un h soufflé."
+    },
+    {
+     "id": "v.1.01.b",
+     "audio": "she",
+     "fr": "elle",
+     "tokens": [
+      "b.she"
+     ],
+     "distractors": [
+      "b.he",
+      "b.we"
+     ],
+     "pivotAlternatives": [
+      "he"
+     ],
+     "pivotElements": [
+      "b.she"
+     ],
+     "aRetenir": "She commence par « ch »."
+    },
+    {
+     "id": "v.1.01.c",
+     "audio": "there",
+     "fr": "là-bas",
+     "tokens": [
+      "b.there"
+     ],
+     "distractors": [
+      "b.here",
+      "b.they"
+     ],
+     "pivotAlternatives": [
+      "here"
+     ],
+     "pivotElements": [
+      "b.there"
+     ],
+     "aRetenir": "There commence par un th."
+    }
+   ]
+  },
+  {
+   "order": 2,
+   "variants": [
+    {
+     "id": "v.1.02.a",
+     "audio": "I'm cold.",
+     "fr": "J'ai froid.",
+     "tokens": [
+      "b.im",
+      "b.cold"
+     ],
+     "distractors": [
+      "b.hes",
+      "b.late"
+     ],
+     "pivotAlternatives": [
+      "He's cold.",
+      "I'm late."
+     ],
+     "pivotElements": [
+      "b.cold",
+      "f.be"
+     ],
+     "aRetenir": "I'm = I am."
+    },
+    {
+     "id": "v.1.02.b",
+     "audio": "She's late.",
+     "fr": "Elle est en retard.",
+     "tokens": [
+      "b.shes",
+      "b.late"
+     ],
+     "distractors": [
+      "b.hes",
+      "b.tired"
+     ],
+     "pivotAlternatives": [
+      "He's late.",
+      "She's tired."
+     ],
+     "pivotElements": [
+      "b.late",
+      "f.be"
+     ],
+     "aRetenir": "Écoute le début : « ch » ou h soufflé."
+    },
+    {
+     "id": "v.1.02.c",
+     "audio": "He's angry.",
+     "fr": "Il est en colère.",
+     "tokens": [
+      "b.hes",
+      "b.angry"
+     ],
+     "distractors": [
+      "b.shes",
+      "b.hungry"
+     ],
+     "pivotAlternatives": [
+      "She's angry.",
+      "He's hungry."
+     ],
+     "pivotElements": [
+      "b.angry",
+      "f.be"
+     ],
+     "aRetenir": "Angry n'a pas de h."
+    }
+   ]
+  },
+  {
+   "order": 3,
+   "variants": [
+    {
+     "id": "v.1.03.a",
+     "audio": "We are tired.",
+     "fr": "Nous sommes fatigués.",
+     "tokens": [
+      "b.we",
+      "b.are",
+      "b.tired"
+     ],
+     "distractors": [
+      "b.they",
+      "b.cold"
+     ],
+     "pivotAlternatives": [
+      "They are tired.",
+      "We are cold."
+     ],
+     "pivotElements": [
+      "b.we",
+      "b.tired",
+      "f.be"
+     ],
+     "aRetenir": "We = nous.",
+     "riposte": {
+      "question": "Que dit-il ?",
+      "options": [
+       {
+        "text": "Nous sommes fatigués.",
+        "correct": true
+       },
+       {
+        "text": "Ils sont fatigués.",
+        "correct": false,
+        "blame": "b.we"
+       },
+       {
+        "text": "Nous avons froid.",
+        "correct": false,
+        "blame": "b.tired"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.03.b",
+     "audio": "You are late.",
+     "fr": "Tu es en retard.",
+     "tokens": [
+      "b.you",
+      "b.are",
+      "b.late"
+     ],
+     "distractors": [
+      "b.we",
+      "b.here"
+     ],
+     "pivotAlternatives": [
+      "We are late.",
+      "You are here."
+     ],
+     "pivotElements": [
+      "b.you",
+      "b.late",
+      "f.be"
+     ],
+     "aRetenir": "Late = en retard.",
+     "riposte": {
+      "question": "Que dit-il ?",
+      "options": [
+       {
+        "text": "Tu es en retard.",
+        "correct": true
+       },
+       {
+        "text": "Nous sommes en retard.",
+        "correct": false,
+        "blame": "b.you"
+       },
+       {
+        "text": "Tu es ici.",
+        "correct": false,
+        "blame": "b.late"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.03.c",
+     "audio": "They are French.",
+     "fr": "Ils sont français.",
+     "tokens": [
+      "b.they",
+      "b.are",
+      "b.french"
+     ],
+     "distractors": [
+      "b.we",
+      "b.english"
+     ],
+     "pivotAlternatives": [
+      "We are French.",
+      "They are English."
+     ],
+     "pivotElements": [
+      "b.they",
+      "b.french",
+      "f.be"
+     ],
+     "aRetenir": "They = ils, elles.",
+     "riposte": {
+      "question": "Que dit-il ?",
+      "options": [
+       {
+        "text": "Ils sont français.",
+        "correct": true
+       },
+       {
+        "text": "Nous sommes français.",
+        "correct": false,
+        "blame": "b.they"
+       },
+       {
+        "text": "Ils sont anglais.",
+        "correct": false,
+        "blame": "b.french"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "order": 4,
+   "variants": [
+    {
+     "id": "v.1.04.a",
+     "audio": "She is a teacher.",
+     "fr": "Elle est professeure.",
+     "tokens": [
+      "b.she",
+      "b.is",
+      "b.a",
+      "b.teacher"
+     ],
+     "distractors": [
+      "b.he",
+      "b.doctor"
+     ],
+     "pivotAlternatives": [
+      "He is a teacher.",
+      "She is a doctor."
+     ],
+     "pivotElements": [
+      "b.she",
+      "b.teacher",
+      "f.be"
+     ],
+     "aRetenir": "Teacher = professeur.",
+     "riposte": {
+      "question": "Que fait cette personne ?",
+      "options": [
+       {
+        "text": "Elle enseigne.",
+        "correct": true
+       },
+       {
+        "text": "Il enseigne.",
+        "correct": false,
+        "blame": "b.she"
+       },
+       {
+        "text": "Elle soigne.",
+        "correct": false,
+        "blame": "b.teacher"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.04.b",
+     "audio": "He is an artist.",
+     "fr": "Il est artiste.",
+     "tokens": [
+      "b.he",
+      "b.is",
+      "b.an",
+      "b.artist"
+     ],
+     "distractors": [
+      "b.she",
+      "b.a",
+      "b.sailor"
+     ],
+     "pivotAlternatives": [
+      "She is an artist.",
+      "He is a sailor."
+     ],
+     "pivotElements": [
+      "b.he",
+      "b.artist",
+      "f.be"
+     ],
+     "aRetenir": "an devant un son de voyelle.",
+     "riposte": {
+      "question": "Qui est-ce ?",
+      "options": [
+       {
+        "text": "Un homme artiste.",
+        "correct": true
+       },
+       {
+        "text": "Une femme artiste.",
+        "correct": false,
+        "blame": "b.he"
+       },
+       {
+        "text": "Un marin.",
+        "correct": false,
+        "blame": "b.artist"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.04.c",
+     "audio": "It is a chair.",
+     "fr": "C'est une chaise.",
+     "tokens": [
+      "b.it",
+      "b.is",
+      "b.a",
+      "b.chair"
+     ],
+     "distractors": [
+      "b.this",
+      "b.coin"
+     ],
+     "pivotAlternatives": [
+      "This is a chair.",
+      "It is a coin."
+     ],
+     "pivotElements": [
+      "b.chair",
+      "f.be"
+     ],
+     "aRetenir": "Chair = chaise.",
+     "riposte": {
+      "question": "Que désigne-t-il ?",
+      "options": [
+       {
+        "text": "Une chaise.",
+        "correct": true
+       },
+       {
+        "text": "De la chair.",
+        "correct": false,
+        "blame": "b.chair"
+       },
+       {
+        "text": "Une pièce de monnaie.",
+        "correct": false,
+        "blame": "b.chair"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "order": 5,
+   "variants": [
+    {
+     "id": "v.1.05.a",
+     "audio": "I'm not hungry.",
+     "fr": "Je n'ai pas faim.",
+     "tokens": [
+      "b.im",
+      "b.not",
+      "b.hungry"
+     ],
+     "distractors": [
+      "b.angry",
+      "b.hes"
+     ],
+     "pivotAlternatives": [
+      "I'm not angry.",
+      "He's not hungry."
+     ],
+     "pivotElements": [
+      "b.hungry",
+      "f.not"
+     ],
+     "aRetenir": "Le not s'entend après I'm.",
+     "riposte": {
+      "question": "Comment va le Gardien ?",
+      "options": [
+       {
+        "text": "Il n'a pas faim.",
+        "correct": true
+       },
+       {
+        "text": "Il n'est pas en colère.",
+        "correct": false,
+        "blame": "b.hungry"
+       },
+       {
+        "text": "Il a faim.",
+        "correct": false,
+        "blame": "f.not"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.05.b",
+     "audio": "She isn't late.",
+     "fr": "Elle n'est pas en retard.",
+     "tokens": [
+      "b.she",
+      "b.isnt",
+      "b.late"
+     ],
+     "distractors": [
+      "b.he",
+      "b.is",
+      "b.here"
+     ],
+     "pivotAlternatives": [
+      "He is late.",
+      "She is here."
+     ],
+     "pivotElements": [
+      "b.she",
+      "b.late",
+      "f.not"
+     ],
+     "aRetenir": "Le n't est court : tends l'oreille.",
+     "riposte": {
+      "question": "Que sais-tu d'elle ?",
+      "options": [
+       {
+        "text": "Elle est à l'heure.",
+        "correct": true
+       },
+       {
+        "text": "Elle est en retard.",
+        "correct": false,
+        "blame": "f.not"
+       },
+       {
+        "text": "Il est à l'heure.",
+        "correct": false,
+        "blame": "b.she"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.05.c",
+     "audio": "They aren't French.",
+     "fr": "Ils ne sont pas français.",
+     "tokens": [
+      "b.they",
+      "b.arent",
+      "b.french"
+     ],
+     "distractors": [
+      "b.we",
+      "b.are",
+      "b.english"
+     ],
+     "pivotAlternatives": [
+      "We are French.",
+      "They are English."
+     ],
+     "pivotElements": [
+      "b.they",
+      "b.french",
+      "f.not"
+     ],
+     "aRetenir": "Aren't = are not.",
+     "riposte": {
+      "question": "Que sais-tu d'eux ?",
+      "options": [
+       {
+        "text": "Ils ne sont pas français.",
+        "correct": true
+       },
+       {
+        "text": "Ils sont français.",
+        "correct": false,
+        "blame": "f.not"
+       },
+       {
+        "text": "Nous ne sommes pas anglais.",
+        "correct": false,
+        "blame": "b.they"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "order": 6,
+   "variants": [
+    {
+     "id": "v.1.06.a",
+     "audio": "Is he a doctor?",
+     "fr": "Est-il médecin ?",
+     "tokens": [
+      "b.is",
+      "b.he",
+      "b.a",
+      "b.doctor"
+     ],
+     "distractors": [
+      "b.she",
+      "b.teacher"
+     ],
+     "pivotAlternatives": [
+      "He is a doctor.",
+      "Is she a doctor?"
+     ],
+     "pivotElements": [
+      "b.he",
+      "b.doctor",
+      "f.q"
+     ],
+     "aRetenir": "Le verbe en tête annonce une question.",
+     "riposte": {
+      "question": "Que veut-il ?",
+      "options": [
+       {
+        "text": "Savoir si cet homme est médecin.",
+        "correct": true
+       },
+       {
+        "text": "Savoir si cette femme est médecin.",
+        "correct": false,
+        "blame": "b.he"
+       },
+       {
+        "text": "Rien, il l'affirme.",
+        "correct": false,
+        "blame": "f.q"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.06.b",
+     "audio": "Are you tired?",
+     "fr": "Es-tu fatigué ?",
+     "tokens": [
+      "b.are",
+      "b.you",
+      "b.tired"
+     ],
+     "distractors": [
+      "b.we",
+      "b.cold"
+     ],
+     "pivotAlternatives": [
+      "You are tired.",
+      "We are cold."
+     ],
+     "pivotElements": [
+      "b.you",
+      "b.tired",
+      "f.q"
+     ],
+     "aRetenir": "Are you…? est une question.",
+     "riposte": {
+      "question": "Que fait-il ?",
+      "options": [
+       {
+        "text": "Il te demande si tu es fatigué.",
+        "correct": true
+       },
+       {
+        "text": "Il affirme que tu es fatigué.",
+        "correct": false,
+        "blame": "f.q"
+       },
+       {
+        "text": "Il te demande si tu as froid.",
+        "correct": false,
+        "blame": "b.tired"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.06.c",
+     "audio": "Is the car here?",
+     "fr": "La voiture est-elle ici ?",
+     "tokens": [
+      "b.is",
+      "b.the",
+      "b.car",
+      "b.here"
+     ],
+     "distractors": [
+      "b.there",
+      "b.key"
+     ],
+     "pivotAlternatives": [
+      "The car is here.",
+      "Is the key there?"
+     ],
+     "pivotElements": [
+      "b.car",
+      "b.here",
+      "f.q"
+     ],
+     "aRetenir": "Car = voiture.",
+     "riposte": {
+      "question": "Que veut-il ?",
+      "options": [
+       {
+        "text": "Savoir si la voiture est ici.",
+        "correct": true
+       },
+       {
+        "text": "Savoir si le car est ici.",
+        "correct": false,
+        "blame": "b.car"
+       },
+       {
+        "text": "Rien, il l'affirme.",
+        "correct": false,
+        "blame": "f.q"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "order": 7,
+   "variants": [
+    {
+     "id": "v.1.07.a",
+     "audio": "Where is the station?",
+     "fr": "Où est la gare ?",
+     "tokens": [
+      "b.where",
+      "b.is",
+      "b.the",
+      "b.station"
+     ],
+     "distractors": [
+      "b.who",
+      "b.library"
+     ],
+     "pivotAlternatives": [
+      "Where is the library?"
+     ],
+     "pivotElements": [
+      "b.where",
+      "b.station",
+      "f.q"
+     ],
+     "aRetenir": "Station = gare.",
+     "riposte": {
+      "question": "Que cherche-t-il ?",
+      "options": [
+       {
+        "text": "La gare.",
+        "correct": true
+       },
+       {
+        "text": "La bibliothèque.",
+        "correct": false,
+        "blame": "b.station"
+       },
+       {
+        "text": "Quelqu'un à la gare.",
+        "correct": false,
+        "blame": "b.where"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.07.b",
+     "audio": "Who is this woman?",
+     "fr": "Qui est cette femme ?",
+     "tokens": [
+      "b.who",
+      "b.is",
+      "b.this",
+      "b.woman"
+     ],
+     "distractors": [
+      "b.where",
+      "b.man"
+     ],
+     "pivotAlternatives": [
+      "Where is this woman?",
+      "Who is this man?"
+     ],
+     "pivotElements": [
+      "b.who",
+      "b.woman",
+      "f.q"
+     ],
+     "aRetenir": "Who = qui, where = où.",
+     "riposte": {
+      "question": "Que veut-il ?",
+      "options": [
+       {
+        "text": "Savoir qui est cette femme.",
+        "correct": true
+       },
+       {
+        "text": "Savoir où est cette femme.",
+        "correct": false,
+        "blame": "b.who"
+       },
+       {
+        "text": "Savoir qui est cet homme.",
+        "correct": false,
+        "blame": "b.woman"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.07.c",
+     "audio": "What is your name?",
+     "fr": "Comment t'appelles-tu ?",
+     "tokens": [
+      "b.what",
+      "b.is",
+      "b.your",
+      "b.name"
+     ],
+     "distractors": [
+      "b.where",
+      "b.my"
+     ],
+     "pivotAlternatives": [
+      "What is my name?",
+      "Where is your name?"
+     ],
+     "pivotElements": [
+      "b.what",
+      "b.your",
+      "f.q"
+     ],
+     "aRetenir": "Your = ton, my = mon.",
+     "riposte": {
+      "question": "Que dois-tu lui dire ?",
+      "options": [
+       {
+        "text": "Ton nom.",
+        "correct": true
+       },
+       {
+        "text": "L'endroit où tu es.",
+        "correct": false,
+        "blame": "b.what"
+       },
+       {
+        "text": "Son nom à lui.",
+        "correct": false,
+        "blame": "b.your"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "order": 8,
+   "variants": [
+    {
+     "id": "v.1.08.a",
+     "audio": "The key is in the bag.",
+     "fr": "La clé est dans le sac.",
+     "tokens": [
+      "b.the",
+      "b.key",
+      "b.is",
+      "b.in",
+      "b.the",
+      "b.bag"
+     ],
+     "distractors": [
+      "b.car",
+      "b.isnt",
+      "b.door"
+     ],
+     "pivotAlternatives": [
+      "The key isn't in the bag.",
+      "The key is in the car."
+     ],
+     "pivotElements": [
+      "b.key",
+      "b.bag",
+      "f.be"
+     ],
+     "aRetenir": "In = dans.",
+     "riposte": {
+      "question": "Où chercher la clé ?",
+      "options": [
+       {
+        "text": "Dans le sac.",
+        "correct": true
+       },
+       {
+        "text": "Dans la voiture.",
+        "correct": false,
+        "blame": "b.bag"
+       },
+       {
+        "text": "Ailleurs que dans le sac.",
+        "correct": false,
+        "blame": "f.not"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.08.b",
+     "audio": "My friend isn't in the library.",
+     "fr": "Mon ami n'est pas à la bibliothèque.",
+     "tokens": [
+      "b.my",
+      "b.friend",
+      "b.isnt",
+      "b.in",
+      "b.the",
+      "b.library"
+     ],
+     "distractors": [
+      "b.your",
+      "b.is",
+      "b.station"
+     ],
+     "pivotAlternatives": [
+      "Your friend isn't in the library.",
+      "My friend is in the library."
+     ],
+     "pivotElements": [
+      "b.my",
+      "b.library",
+      "f.not"
+     ],
+     "aRetenir": "Library = bibliothèque.",
+     "riposte": {
+      "question": "Où l'ami du Gardien n'est-il pas ?",
+      "options": [
+       {
+        "text": "À la bibliothèque.",
+        "correct": true
+       },
+       {
+        "text": "À la librairie.",
+        "correct": false,
+        "blame": "b.library"
+       },
+       {
+        "text": "À la gare.",
+        "correct": false,
+        "blame": "b.library"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.08.c",
+     "audio": "The sailor is in the car.",
+     "fr": "Le marin est dans la voiture.",
+     "tokens": [
+      "b.the",
+      "b.sailor",
+      "b.is",
+      "b.in",
+      "b.the",
+      "b.car"
+     ],
+     "distractors": [
+      "b.doctor",
+      "b.isnt",
+      "b.ship"
+     ],
+     "pivotAlternatives": [
+      "The doctor is in the car.",
+      "The sailor isn't in the ship."
+     ],
+     "pivotElements": [
+      "b.sailor",
+      "b.car",
+      "f.be"
+     ],
+     "aRetenir": "Car = voiture, jamais autocar.",
+     "riposte": {
+      "question": "Où est le marin ?",
+      "options": [
+       {
+        "text": "Dans la voiture.",
+        "correct": true
+       },
+       {
+        "text": "Dans le car.",
+        "correct": false,
+        "blame": "b.car"
+       },
+       {
+        "text": "Sur le navire.",
+        "correct": false,
+        "blame": "b.ship"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "order": 9,
+   "variants": [
+    {
+     "id": "v.1.09.a",
+     "audio": "She is a doctor and he is a teacher.",
+     "fr": "Elle est médecin et il est professeur.",
+     "tokens": [
+      "b.she",
+      "b.is",
+      "b.a",
+      "b.doctor",
+      "b.and",
+      "b.he",
+      "b.is",
+      "b.a",
+      "b.teacher"
+     ],
+     "distractors": [
+      "b.artist",
+      "b.isnt"
+     ],
+     "pivotAlternatives": [
+      "He is a doctor and she is a teacher."
+     ],
+     "pivotElements": [
+      "b.she",
+      "b.he",
+      "f.be"
+     ],
+     "aRetenir": "Doctor, teacher : écoute bien qui fait quoi.",
+     "riposte": {
+      "question": "Qui enseigne ?",
+      "options": [
+       {
+        "text": "L'homme.",
+        "correct": true
+       },
+       {
+        "text": "La femme.",
+        "correct": false,
+        "blame": "b.he"
+       },
+       {
+        "text": "Les deux.",
+        "correct": false,
+        "blame": "b.teacher"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.09.b",
+     "audio": "I am hungry and my friend is tired.",
+     "fr": "J'ai faim et mon ami est fatigué.",
+     "tokens": [
+      "b.i",
+      "b.am",
+      "b.hungry",
+      "b.and",
+      "b.my",
+      "b.friend",
+      "b.is",
+      "b.tired"
+     ],
+     "distractors": [
+      "b.angry",
+      "b.your"
+     ],
+     "pivotAlternatives": [
+      "I am tired and my friend is hungry."
+     ],
+     "pivotElements": [
+      "b.hungry",
+      "b.tired",
+      "f.be"
+     ],
+     "aRetenir": "I renvoie à celui qui parle.",
+     "riposte": {
+      "question": "Qui a faim ?",
+      "options": [
+       {
+        "text": "Le Gardien.",
+        "correct": true
+       },
+       {
+        "text": "Son ami.",
+        "correct": false,
+        "blame": "b.i"
+       },
+       {
+        "text": "Toi.",
+        "correct": false,
+        "blame": "b.my"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.09.c",
+     "audio": "The door is there and the key is here.",
+     "fr": "La porte est là-bas et la clé est ici.",
+     "tokens": [
+      "b.the",
+      "b.door",
+      "b.is",
+      "b.there",
+      "b.and",
+      "b.the",
+      "b.key",
+      "b.is",
+      "b.here"
+     ],
+     "distractors": [
+      "b.car",
+      "b.isnt"
+     ],
+     "pivotAlternatives": [
+      "The door is here and the key is there."
+     ],
+     "pivotElements": [
+      "b.here",
+      "b.there",
+      "f.be"
+     ],
+     "aRetenir": "Here = ici, there = là-bas.",
+     "riposte": {
+      "question": "Où est la clé ?",
+      "options": [
+       {
+        "text": "Ici, près du Gardien.",
+        "correct": true
+       },
+       {
+        "text": "Là-bas, près de la porte.",
+        "correct": false,
+        "blame": "b.here"
+       },
+       {
+        "text": "Dans la voiture.",
+        "correct": false,
+        "blame": "b.car"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "order": 10,
+   "variants": [
+    {
+     "id": "v.1.10.a",
+     "audio": "Is the door here? No, it isn't. It is there.",
+     "fr": "La porte est-elle ici ? Non. Elle est là-bas.",
+     "tokens": [
+      "b.is",
+      "b.the",
+      "b.door",
+      "b.here",
+      "b.no",
+      "b.it",
+      "b.isnt",
+      "b.it",
+      "b.is",
+      "b.there"
+     ],
+     "distractors": [
+      "b.yes",
+      "b.key",
+      "b.in"
+     ],
+     "pivotAlternatives": [
+      "Is the door there? No, it isn't. It is here."
+     ],
+     "pivotElements": [
+      "b.here",
+      "b.there",
+      "f.q",
+      "f.not"
+     ],
+     "aRetenir": "La fin de la phrase donne la réponse.",
+     "riposte": {
+      "question": "Où aller ?",
+      "options": [
+       {
+        "text": "Là-bas.",
+        "correct": true
+       },
+       {
+        "text": "Ici.",
+        "correct": false,
+        "blame": "b.there"
+       },
+       {
+        "text": "Nulle part, il n'y a pas de porte.",
+        "correct": false,
+        "blame": "f.q"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.10.b",
+     "audio": "Who is the man in the car? He is my friend.",
+     "fr": "Qui est l'homme dans la voiture ? C'est mon ami.",
+     "tokens": [
+      "b.who",
+      "b.is",
+      "b.the",
+      "b.man",
+      "b.in",
+      "b.the",
+      "b.car",
+      "b.he",
+      "b.is",
+      "b.my",
+      "b.friend"
+     ],
+     "distractors": [
+      "b.your",
+      "b.woman",
+      "b.where"
+     ],
+     "pivotAlternatives": [
+      "Who is the man in the car? He is your friend."
+     ],
+     "pivotElements": [
+      "b.my",
+      "b.who",
+      "f.q"
+     ],
+     "aRetenir": "My renvoie à celui qui parle.",
+     "riposte": {
+      "question": "Qui est dans la voiture ?",
+      "options": [
+       {
+        "text": "L'ami du Gardien.",
+        "correct": true
+       },
+       {
+        "text": "Ton ami.",
+        "correct": false,
+        "blame": "b.my"
+       },
+       {
+        "text": "Une femme inconnue.",
+        "correct": false,
+        "blame": "b.man"
+       }
+      ]
+     }
+    },
+    {
+     "id": "v.1.10.c",
+     "audio": "Where is the key? It isn't here. It is in the bag.",
+     "fr": "Où est la clé ? Elle n'est pas ici. Elle est dans le sac.",
+     "tokens": [
+      "b.where",
+      "b.is",
+      "b.the",
+      "b.key",
+      "b.it",
+      "b.isnt",
+      "b.here",
+      "b.it",
+      "b.is",
+      "b.in",
+      "b.the",
+      "b.bag"
+     ],
+     "distractors": [
+      "b.car",
+      "b.there",
+      "b.door"
+     ],
+     "pivotAlternatives": [
+      "Where is the key? It isn't there. It is in the car."
+     ],
+     "pivotElements": [
+      "b.here",
+      "b.bag",
+      "f.q",
+      "f.not"
+     ],
+     "aRetenir": "It reprend the key.",
+     "riposte": {
+      "question": "Où est la clé ?",
+      "options": [
+       {
+        "text": "Dans le sac.",
+        "correct": true
+       },
+       {
+        "text": "Ici.",
+        "correct": false,
+        "blame": "b.bag"
+       },
+       {
+        "text": "Dans la voiture.",
+        "correct": false,
+        "blame": "b.car"
+       }
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

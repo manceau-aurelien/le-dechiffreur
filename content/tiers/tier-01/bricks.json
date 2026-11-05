@@ -1,0 +1,924 @@
+[
+ {
+  "id": "b.hello",
+  "en": "hello",
+  "fr": [
+   "bonjour",
+   "salut"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.01",
+  "confusableWith": [
+   "b.here",
+   "b.happy"
+  ],
+  "note": "Le h se souffle."
+ },
+ {
+  "id": "b.goodbye",
+  "en": "goodbye",
+  "fr": [
+   "au revoir"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.01",
+  "confusableWith": []
+ },
+ {
+  "id": "b.yes",
+  "en": "yes",
+  "fr": [
+   "oui"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.01",
+  "confusableWith": [
+   "b.this"
+  ]
+ },
+ {
+  "id": "b.no",
+  "en": "no",
+  "fr": [
+   "non"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.01",
+  "confusableWith": [
+   "b.not"
+  ]
+ },
+ {
+  "id": "b.please",
+  "en": "please",
+  "fr": [
+   "s'il te plaît",
+   "s'il vous plaît"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.01",
+  "confusableWith": []
+ },
+ {
+  "id": "b.thank-you",
+  "en": "thank you",
+  "fr": [
+   "merci"
+  ],
+  "kind": "chunk",
+  "tracked": true,
+  "nodeId": "n.1.01",
+  "confusableWith": [],
+  "note": "Bloc de deux mots, à apprendre d'un coup."
+ },
+ {
+  "id": "b.i",
+  "en": "I",
+  "fr": [
+   "je"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.02",
+  "confusableWith": [
+   "b.my"
+  ],
+  "note": "Toujours en majuscule. Se dit presque comme « aïe »."
+ },
+ {
+  "id": "b.you",
+  "en": "you",
+  "fr": [
+   "tu",
+   "vous"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.02",
+  "confusableWith": [
+   "b.your"
+  ],
+  "note": "Un seul mot pour tu et vous."
+ },
+ {
+  "id": "b.he",
+  "en": "he",
+  "fr": [
+   "il"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.02",
+  "confusableWith": [
+   "b.she",
+   "b.we"
+  ],
+  "note": "Pour une personne, un homme."
+ },
+ {
+  "id": "b.she",
+  "en": "she",
+  "fr": [
+   "elle"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.02",
+  "confusableWith": [
+   "b.he"
+  ],
+  "note": "Pour une personne, une femme."
+ },
+ {
+  "id": "b.it",
+  "en": "it",
+  "fr": [
+   "il",
+   "elle",
+   "ça (pour une chose)"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.02",
+  "confusableWith": [
+   "b.in",
+   "b.he"
+  ],
+  "note": "Pour une chose ou un animal."
+ },
+ {
+  "id": "b.we",
+  "en": "we",
+  "fr": [
+   "nous"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.02",
+  "confusableWith": [
+   "b.he",
+   "b.she"
+  ]
+ },
+ {
+  "id": "b.they",
+  "en": "they",
+  "fr": [
+   "ils",
+   "elles"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.02",
+  "confusableWith": [
+   "b.there",
+   "b.the"
+  ]
+ },
+ {
+  "id": "b.man",
+  "en": "man",
+  "fr": [
+   "homme"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.03",
+  "confusableWith": [
+   "b.name"
+  ]
+ },
+ {
+  "id": "b.woman",
+  "en": "woman",
+  "fr": [
+   "femme"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.03",
+  "confusableWith": [
+   "b.man"
+  ]
+ },
+ {
+  "id": "b.friend",
+  "en": "friend",
+  "fr": [
+   "ami",
+   "amie"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.03",
+  "confusableWith": [
+   "b.french"
+  ]
+ },
+ {
+  "id": "b.doctor",
+  "en": "doctor",
+  "fr": [
+   "médecin"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.03",
+  "confusableWith": []
+ },
+ {
+  "id": "b.teacher",
+  "en": "teacher",
+  "fr": [
+   "professeur",
+   "enseignant"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.03",
+  "confusableWith": []
+ },
+ {
+  "id": "b.sailor",
+  "en": "sailor",
+  "fr": [
+   "marin"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.03",
+  "confusableWith": []
+ },
+ {
+  "id": "b.artist",
+  "en": "artist",
+  "fr": [
+   "artiste"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.03",
+  "confusableWith": [],
+  "note": "Commence par un son de voyelle : an artist."
+ },
+ {
+  "id": "b.hungry",
+  "en": "hungry",
+  "fr": [
+   "qui a faim"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.04",
+  "confusableWith": [
+   "b.angry",
+   "b.happy"
+  ],
+  "note": "Avec un h soufflé. Sans h, c'est la colère."
+ },
+ {
+  "id": "b.angry",
+  "en": "angry",
+  "fr": [
+   "en colère"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.04",
+  "confusableWith": [
+   "b.hungry"
+  ]
+ },
+ {
+  "id": "b.cold",
+  "en": "cold",
+  "fr": [
+   "froid",
+   "qui a froid"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.04",
+  "confusableWith": []
+ },
+ {
+  "id": "b.tired",
+  "en": "tired",
+  "fr": [
+   "fatigué"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.04",
+  "confusableWith": []
+ },
+ {
+  "id": "b.happy",
+  "en": "happy",
+  "fr": [
+   "heureux",
+   "content"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.04",
+  "confusableWith": [
+   "b.hungry"
+  ]
+ },
+ {
+  "id": "b.late",
+  "en": "late",
+  "fr": [
+   "en retard"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.06",
+  "confusableWith": []
+ },
+ {
+  "id": "b.french",
+  "en": "French",
+  "fr": [
+   "français",
+   "française"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.06",
+  "confusableWith": [
+   "b.friend"
+  ],
+  "note": "Majuscule obligatoire."
+ },
+ {
+  "id": "b.english",
+  "en": "English",
+  "fr": [
+   "anglais",
+   "anglaise"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.06",
+  "confusableWith": [],
+  "note": "Majuscule obligatoire."
+ },
+ {
+  "id": "b.ten",
+  "en": "ten",
+  "fr": [
+   "dix"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.06",
+  "confusableWith": []
+ },
+ {
+  "id": "b.twenty",
+  "en": "twenty",
+  "fr": [
+   "vingt"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.06",
+  "confusableWith": []
+ },
+ {
+  "id": "b.ship",
+  "en": "ship",
+  "fr": [
+   "navire"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.07",
+  "confusableWith": [
+   "b.she"
+  ]
+ },
+ {
+  "id": "b.door",
+  "en": "door",
+  "fr": [
+   "porte"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.07",
+  "confusableWith": [
+   "b.four"
+  ]
+ },
+ {
+  "id": "b.key",
+  "en": "key",
+  "fr": [
+   "clé"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.07",
+  "confusableWith": [
+   "b.he"
+  ]
+ },
+ {
+  "id": "b.station",
+  "en": "station",
+  "fr": [
+   "gare"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.07",
+  "confusableWith": []
+ },
+ {
+  "id": "b.bag",
+  "en": "bag",
+  "fr": [
+   "sac"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.07",
+  "confusableWith": []
+ },
+ {
+  "id": "b.library",
+  "en": "library",
+  "fr": [
+   "bibliothèque"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.08",
+  "confusableWith": [],
+  "note": "Faux ami. Une librairie se dit bookshop."
+ },
+ {
+  "id": "b.chair",
+  "en": "chair",
+  "fr": [
+   "chaise"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.08",
+  "confusableWith": [
+   "b.there"
+  ],
+  "note": "Faux ami, rien à voir avec la chair."
+ },
+ {
+  "id": "b.coin",
+  "en": "coin",
+  "fr": [
+   "pièce de monnaie"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.08",
+  "confusableWith": [],
+  "note": "Faux ami. Se dit « coïn »."
+ },
+ {
+  "id": "b.car",
+  "en": "car",
+  "fr": [
+   "voiture"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.08",
+  "confusableWith": [
+   "b.are"
+  ],
+  "note": "Faux ami, ce n'est pas un autocar."
+ },
+ {
+  "id": "b.sensible",
+  "en": "sensible",
+  "fr": [
+   "raisonnable"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.08",
+  "confusableWith": [],
+  "note": "Faux ami. « Sensible » se dit sensitive."
+ },
+ {
+  "id": "b.four",
+  "en": "four",
+  "fr": [
+   "quatre"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.08",
+  "confusableWith": [
+   "b.door"
+  ],
+  "note": "Faux ami. Se dit « for »."
+ },
+ {
+  "id": "b.here",
+  "en": "here",
+  "fr": [
+   "ici"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.there",
+   "b.hello"
+  ]
+ },
+ {
+  "id": "b.there",
+  "en": "there",
+  "fr": [
+   "là-bas",
+   "là"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.here",
+   "b.they"
+  ]
+ },
+ {
+  "id": "b.in",
+  "en": "in",
+  "fr": [
+   "dans"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.it"
+  ]
+ },
+ {
+  "id": "b.this",
+  "en": "this",
+  "fr": [
+   "ce",
+   "cette",
+   "ceci"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.yes"
+  ],
+  "note": "This is… sert aussi à présenter : « Voici… »."
+ },
+ {
+  "id": "b.and",
+  "en": "and",
+  "fr": [
+   "et"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.an"
+  ]
+ },
+ {
+  "id": "b.my",
+  "en": "my",
+  "fr": [
+   "mon",
+   "ma"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.i"
+  ]
+ },
+ {
+  "id": "b.your",
+  "en": "your",
+  "fr": [
+   "ton",
+   "ta",
+   "votre"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.you"
+  ]
+ },
+ {
+  "id": "b.name",
+  "en": "name",
+  "fr": [
+   "nom"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.10",
+  "confusableWith": [
+   "b.man"
+  ]
+ },
+ {
+  "id": "b.where",
+  "en": "where",
+  "fr": [
+   "où"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.11",
+  "confusableWith": [
+   "b.there",
+   "b.here"
+  ]
+ },
+ {
+  "id": "b.who",
+  "en": "who",
+  "fr": [
+   "qui"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.11",
+  "confusableWith": [
+   "b.how",
+   "b.he"
+  ],
+  "note": "Le w ne se prononce pas."
+ },
+ {
+  "id": "b.what",
+  "en": "what",
+  "fr": [
+   "quoi",
+   "que"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.11",
+  "confusableWith": []
+ },
+ {
+  "id": "b.how",
+  "en": "how",
+  "fr": [
+   "comment"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.1.11",
+  "confusableWith": [
+   "b.who"
+  ]
+ },
+ {
+  "id": "b.am",
+  "en": "am",
+  "fr": [
+   "suis"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.is",
+  "en": "is",
+  "fr": [
+   "est"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.are",
+  "en": "are",
+  "fr": [
+   "es",
+   "sommes",
+   "êtes",
+   "sont"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.im",
+  "en": "I'm",
+  "fr": [
+   "je suis"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.youre",
+  "en": "you're",
+  "fr": [
+   "tu es",
+   "vous êtes"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.hes",
+  "en": "he's",
+  "fr": [
+   "il est"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.shes",
+  "en": "she's",
+  "fr": [
+   "elle est"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.its",
+  "en": "it's",
+  "fr": [
+   "c'est"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.were",
+  "en": "we're",
+  "fr": [
+   "nous sommes"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.theyre",
+  "en": "they're",
+  "fr": [
+   "ils sont",
+   "elles sont"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.a",
+  "en": "a",
+  "fr": [
+   "un",
+   "une"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.an",
+  "en": "an",
+  "fr": [
+   "un",
+   "une"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.the",
+  "en": "the",
+  "fr": [
+   "le",
+   "la",
+   "les"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.be",
+  "confusableWith": [],
+  "nodeId": "n.1.07"
+ },
+ {
+  "id": "b.not",
+  "en": "not",
+  "fr": [
+   "ne… pas"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.not",
+  "confusableWith": [],
+  "nodeId": "n.1.09"
+ },
+ {
+  "id": "b.isnt",
+  "en": "isn't",
+  "fr": [
+   "n'est pas"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.not",
+  "confusableWith": [],
+  "nodeId": "n.1.09"
+ },
+ {
+  "id": "b.arent",
+  "en": "aren't",
+  "fr": [
+   "ne sont pas"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.not",
+  "confusableWith": [],
+  "nodeId": "n.1.09"
+ },
+ {
+  "id": "b.tom",
+  "en": "Tom",
+  "fr": [
+   "Tom"
+  ],
+  "kind": "proper",
+  "tracked": false,
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ },
+ {
+  "id": "b.anna",
+  "en": "Anna",
+  "fr": [
+   "Anna"
+  ],
+  "kind": "proper",
+  "tracked": false,
+  "confusableWith": [],
+  "nodeId": "n.1.05"
+ }
+]

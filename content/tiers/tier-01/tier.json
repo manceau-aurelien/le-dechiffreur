@@ -1,0 +1,193 @@
+{
+ "id": "tier-01",
+ "order": 1,
+ "title": "Le Port",
+ "bossId": "boss-01",
+ "soundTestBrickId": "b.door",
+ "stele": {
+  "en": "Hello. My name is Anna. I am a sailor. I am not English. I am French. The ship is late and I am tired. Where is the key? It isn't here. It is in the library. The door is there. Thank you, friend. Goodbye.",
+  "fr": "Bonjour. Je m'appelle Anna. Je suis marin. Je ne suis pas anglaise. Je suis française. Le navire est en retard et je suis fatiguée. Où est la clé ? Elle n'est pas ici. Elle est à la bibliothèque. La porte est là-bas. Merci, ami. Au revoir."
+ },
+ "texts": {
+  "firstLaunch": "Ton bateau a sombré. Sur ce port, personne ne parle ta langue. Un carnet traîne sur le quai, écrit en français.",
+  "comeback": "Te revoilà. On commence par ce qui compte le plus.",
+  "anteroom": "Le Gardien ne parle qu'une langue. Tes briques ne t'aideront pas à l'entendre : là-dedans, elles se taisent.",
+  "firstEntry": "Ici, tes briques se taisent.",
+  "defeat": "Il m'a fait reculer bien des fois. Mes oreilles apprenaient à chaque fois.",
+  "victory": "Tu l'as compris. Vraiment compris. La porte s'ouvre. La bibliothèque n'est pas loin."
+ },
+ "nodes": [
+  {
+   "id": "n.1.01",
+   "kind": "vein",
+   "title": "Première rencontre",
+   "brickIds": [
+    "b.hello",
+    "b.goodbye",
+    "b.yes",
+    "b.no",
+    "b.please",
+    "b.thank-you"
+   ],
+   "intro": "Si tu lis ceci, tu es perdu comme moi. Commence par écouter. Le reste viendra."
+  },
+  {
+   "id": "n.1.02",
+   "kind": "vein",
+   "title": "Les voix",
+   "brickIds": [
+    "b.i",
+    "b.you",
+    "b.he",
+    "b.she",
+    "b.it",
+    "b.we",
+    "b.they"
+   ]
+  },
+  {
+   "id": "n.1.03",
+   "kind": "vein",
+   "title": "Les gens du port",
+   "brickIds": [
+    "b.man",
+    "b.woman",
+    "b.friend",
+    "b.doctor",
+    "b.teacher",
+    "b.sailor",
+    "b.artist"
+   ]
+  },
+  {
+   "id": "n.1.04",
+   "kind": "vein",
+   "title": "Ce qu'on ressent",
+   "brickIds": [
+    "b.hungry",
+    "b.angry",
+    "b.cold",
+    "b.tired",
+    "b.happy"
+   ]
+  },
+  {
+   "id": "n.1.05",
+   "kind": "formula",
+   "title": "La Formule d'Être",
+   "formulaId": "f.be",
+   "trapIds": [
+    "t.01",
+    "t.02",
+    "t.03",
+    "t.04"
+   ],
+   "intro": "J'ai entendu ces phrases partout. Quelque chose change selon la personne. À toi de voir quoi."
+  },
+  {
+   "id": "n.1.06",
+   "kind": "vein",
+   "title": "D'où tu viens, quel âge",
+   "brickIds": [
+    "b.late",
+    "b.french",
+    "b.english",
+    "b.ten",
+    "b.twenty"
+   ],
+   "trapIds": [
+    "t.05",
+    "t.06"
+   ]
+  },
+  {
+   "id": "n.1.07",
+   "kind": "vein",
+   "title": "Le quai",
+   "brickIds": [
+    "b.ship",
+    "b.door",
+    "b.key",
+    "b.station",
+    "b.bag"
+   ]
+  },
+  {
+   "id": "n.1.08",
+   "kind": "vein",
+   "title": "Le Bestiaire",
+   "brickIds": [
+    "b.library",
+    "b.chair",
+    "b.coin",
+    "b.car",
+    "b.sensible",
+    "b.four"
+   ],
+   "trapIds": [
+    "t.07",
+    "t.08",
+    "t.09",
+    "t.10",
+    "t.11",
+    "t.12"
+   ],
+   "intro": "Méfie-toi. Ces mots te ressemblent, mais ils te mentent."
+  },
+  {
+   "id": "n.1.09",
+   "kind": "formula",
+   "title": "La Formule du Non",
+   "formulaId": "f.not",
+   "trapIds": [
+    "t.13"
+   ],
+   "intro": "Il me fallait dire non. On ne survit pas ici sans savoir dire non."
+  },
+  {
+   "id": "n.1.10",
+   "kind": "vein",
+   "title": "Repères",
+   "brickIds": [
+    "b.here",
+    "b.there",
+    "b.in",
+    "b.this",
+    "b.and",
+    "b.my",
+    "b.your",
+    "b.name"
+   ],
+   "trapIds": [
+    "t.14"
+   ]
+  },
+  {
+   "id": "n.1.11",
+   "kind": "vein",
+   "title": "Les questions",
+   "brickIds": [
+    "b.where",
+    "b.who",
+    "b.what",
+    "b.how"
+   ]
+  },
+  {
+   "id": "n.1.12",
+   "kind": "formula",
+   "title": "La Formule de la Question",
+   "formulaId": "f.q",
+   "trapIds": [
+    "t.15",
+    "t.16"
+   ],
+   "intro": "J'ai encore mille questions. Apprenons à les poser."
+  },
+  {
+   "id": "n.1.13",
+   "kind": "boss",
+   "title": "Le Gardien de la Porte"
+  }
+ ]
+}
