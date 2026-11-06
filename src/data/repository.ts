@@ -3,6 +3,7 @@ import { openDatabaseAsync, type SQLiteDatabase } from 'expo-sqlite';
 import type { BossState } from '../core/boss/engine';
 import { emptyProgress, type ProgressSnapshot } from '../core/progress/progress';
 import type { ReviewLogEntry, SrsCard } from '../core/srs/types';
+import { databaseLock } from './databaseLock';
 
 const MIGRATIONS: string[] = [
   `
@@ -105,6 +106,7 @@ class SqliteRepository implements ProgressRepository {
 
   private open(): Promise<SQLiteDatabase> {
     this.db ??= (async () => {
+      await databaseLock.acquire();
       const db = await openDatabaseAsync('dechiffreur.db');
       const row = await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version');
       const version = row?.user_version ?? 0;

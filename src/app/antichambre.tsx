@@ -2,7 +2,6 @@ import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { AUDIO_PROVIDER } from '../audio/audio-manifest';
 import { audio } from '../audio/AudioService';
 import { boss, brick, sayClip, tier } from '../content';
 import { allNodesDone, cardList, nodeStatus } from '../core/progress/progress';
@@ -128,9 +127,6 @@ export default function Anteroom() {
             testID="setting-haptics"
             onChange={(haptics) => setSettings({ ...settings, haptics })}
           />
-          {AUDIO_PROVIDER === 'sapi' ? (
-            <Text style={styles.hint}>Voix provisoires de Windows, pour tester le jeu. Les voix définitives restent à générer.</Text>
-          ) : null}
         </View>
 
         <PrimaryButton

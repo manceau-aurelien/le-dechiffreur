@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ProgressProvider } from '../data/ProgressContext';
 import { BossSessionProvider } from '../ui/BossSession';
+import { DatabaseBusy } from '../ui/DatabaseBusy';
 import { colors } from '../ui/theme';
 
 export default function RootLayout() {
@@ -19,6 +20,7 @@ export default function RootLayout() {
               contentStyle: { backgroundColor: colors.lair },
             }}
           />
+          <DatabaseBusy />
         </BossSessionProvider>
       </ProgressProvider>
     </SafeAreaProvider>

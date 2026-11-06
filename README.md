@@ -26,14 +26,13 @@ Chaque envoi sur `master` valide le contenu, le code et les tests, puis republie
 | --- | --- |
 | `npm run verify` | Valide le contenu, les types et les tests |
 | `npx expo lint` | Vérifie le style du code |
-| `npm run gen:audio` | Génère l'audio avec Kokoro, gratuit et local (une fois : `cd tools/voice && npm install`) |
-| `npm run gen:audio -- --provider sapi` | Génère l'audio avec les voix Windows, peu compréhensibles |
+| `npm run gen:audio` | Génère l'audio avec les voix Windows, celles du jeu |
 | `npm run gen:audio -- --provider azure` | Génère l'audio avec Azure (`AZURE_SPEECH_KEY`, `AZURE_SPEECH_REGION`) |
 
 ## Limites connues
 
 - **Version web sur téléphone.** Il faut du réseau au fil du jeu, car l'audio se charge à la demande. Sur iPhone, Safari peut effacer la progression après 7 jours sans visite : ajouter le jeu à l'écran d'accueil évite ce risque.
-- **Voix.** L'audio vient de Kokoro (modèle Apache 2.0, généré sur l'ordinateur), soit 27 Mo en WAV. Le fournisseur Azure est écrit,
+- **Voix.** Le jeu utilise les voix Windows Zira et David, soit 30 Mo en WAV. Le fournisseur Azure est écrit,
   mais il n'a pas encore été exécuté, faute de clé.
 - **Pas encore essayé sur téléphone.** Le web et les tests tournent. FSRS et SQLite restent à vérifier sur un appareil réel.
 - **Modèle de mémoire.** FSRS-5 avec ses paramètres par défaut, jamais calibrés sur de vrais joueurs. Le journal `review_log` le permettra.
