@@ -10,6 +10,11 @@ import { goToMap } from '../ui/lesson/LessonRun';
 import { GuardianMask, PrimaryButton, QuietButton } from '../ui/components';
 import { colors, MAX_WIDTH } from '../ui/theme';
 
+const enterCity = () => {
+  goToMap();
+  router.navigate('/carte');
+};
+
 export default function Debrief() {
   const { lastCombat, settings, lastBlamed } = useBossSession();
   const [readingStele, setReadingStele] = useState(false);
@@ -77,6 +82,7 @@ export default function Debrief() {
         ) : null}
 
         <PrimaryButton label="Retenter" testID="retry" onPress={() => { audio.stop(); router.replace('/antre'); }} />
+        {won ? <PrimaryButton label="Entrer dans la Ville" testID="to-city" onPress={enterCity} /> : null}
         <QuietButton label="Retour au Camp" testID="back" onPress={goToMap} />
       </ScrollView>
     </SafeAreaView>

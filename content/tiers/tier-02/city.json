@@ -1,0 +1,151 @@
+{
+ "id": "tier-02",
+ "order": 2,
+ "title": "La Ville",
+ "intro": "La clé est à la bibliothèque, au cœur de la ville. Explore les quartiers dans l'ordre que tu veux : chacun réutilise ce que tu sais déjà.",
+ "districts": [
+  {
+   "id": "d.market",
+   "title": "Le Marché",
+   "promise": "Acheter, demander un prix, compter ton argent.",
+   "reuses": [
+    {
+     "element": "f.be",
+     "word": "is",
+     "how": "Avec is, tu décris aussi ce que tu achètes.",
+     "beforeSentenceId": "s.c25",
+     "afterSentenceId": "s.m14"
+    },
+    {
+     "element": "f.q",
+     "word": "is",
+     "how": "Même question, nouvelle situation : ça coûte cher ?",
+     "beforeSentenceId": "s.c67",
+     "afterSentenceId": "s.m17"
+    },
+    {
+     "element": "f.not",
+     "word": "isn't",
+     "how": "La négation sert aussi à négocier.",
+     "beforeSentenceId": "s.c48",
+     "afterSentenceId": "s.m16"
+    },
+    {
+     "element": "b.how",
+     "word": "how",
+     "how": "How s'allonge en how much pour demander un prix.",
+     "beforeSentenceId": "s.c74",
+     "afterSentenceId": "s.m11"
+    },
+    {
+     "element": "b.this",
+     "word": "this",
+     "how": "This désigne ce que tu montres sur l'étal.",
+     "beforeSentenceId": "s.c73",
+     "afterSentenceId": "s.m10"
+    },
+    {
+     "element": "b.please",
+     "word": "please",
+     "how": "La politesse du Port devient ta façon de commander.",
+     "beforeSentenceId": "s.c83",
+     "afterSentenceId": "s.m21"
+    },
+    {
+     "element": "b.ten",
+     "word": "ten",
+     "how": "Ten disait un âge, il dit maintenant un prix.",
+     "beforeSentenceId": "s.c21",
+     "afterSentenceId": "s.m12"
+    },
+    {
+     "element": "b.your",
+     "word": "your",
+     "how": "Your s'applique à tout ce qu'on possède, même l'argent.",
+     "beforeSentenceId": "s.c58",
+     "afterSentenceId": "s.m19"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "n.2.01",
+     "kind": "vein",
+     "title": "Les étals",
+     "brickIds": [
+      "b.apple",
+      "b.egg",
+      "b.orange",
+      "b.bread",
+      "b.milk",
+      "b.market"
+     ],
+     "trapIds": [
+      "t.17"
+     ],
+     "intro": "Le marché sent le pain chaud. Regarde : tes petits mots du port suffisent déjà à désigner ce qui t'entoure."
+    },
+    {
+     "id": "n.2.02",
+     "kind": "vein",
+     "title": "Le prix",
+     "brickIds": [
+      "b.much",
+      "b.dollars",
+      "b.cheap",
+      "b.expensive",
+      "b.money",
+      "b.two",
+      "b.five"
+     ],
+     "trapIds": [
+      "t.18"
+     ],
+     "intro": "Ici, tout a un prix. Ton how et ton is vont te servir à le demander."
+    },
+    {
+     "id": "n.2.03",
+     "kind": "vein",
+     "title": "Acheter",
+     "brickIds": [
+      "b.want",
+      "b.some",
+      "b.seller",
+      "b.for"
+     ],
+     "trapIds": [
+      "t.19"
+     ],
+     "intro": "Il est temps de demander ce que tu veux. Ton please va enfin servir à quelque chose."
+    },
+    {
+     "id": "n.2.04",
+     "kind": "formula",
+     "title": "La Formule du Pluriel",
+     "formulaId": "f.plural",
+     "intro": "Une pomme ne suffira pas. Observe ce qui change quand il y en a plusieurs."
+    }
+   ]
+  },
+  {
+   "id": "d.inn",
+   "title": "L'Auberge",
+   "promise": "Manger, dormir, demander quelque chose.",
+   "reuses": [],
+   "nodes": []
+  },
+  {
+   "id": "d.station",
+   "title": "La Gare",
+   "promise": "Te déplacer, lire l'heure, demander ton chemin.",
+   "reuses": [],
+   "nodes": []
+  },
+  {
+   "id": "d.homes",
+   "title": "Les Maisons",
+   "promise": "Parler de ta famille et de ton quotidien.",
+   "reuses": [],
+   "nodes": []
+  }
+ ]
+}

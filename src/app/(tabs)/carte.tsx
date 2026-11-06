@@ -2,12 +2,14 @@ import { router } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { tier } from '../../content';
+import { lessonContent as content, tier } from '../../content';
 import type { TierNode } from '../../content/schema';
+import { bossBeaten, cityOpen } from '../../core/progress/city';
 import { allNodesDone, cardList, nodeStatus, type NodeStatus } from '../../core/progress/progress';
 import { canStartNew } from '../../core/session/expedition';
 import { bossLock, doorAdvice } from '../../core/srs/memory';
 import { useProgress } from '../../data/ProgressContext';
+import { CityMap } from '../../ui/CityMap';
 import { colors, MAX_WIDTH } from '../../ui/theme';
 
 const STATUS_LABEL: Record<NodeStatus, string> = {
@@ -22,12 +24,32 @@ const KIND_LABEL: Record<TierNode['kind'], string> = { vein: 'Filon', formula: '
 export default function MapScreen() {
   const { progress, engine, loaded, now } = useProgress();
   const [notice, setNotice] = useState<string | null>(null);
+  const [view, setView] = useState<'port' | 'city' | null>(null);
 
   if (!loaded || !engine) return <View style={styles.screen} />;
 
   const t = now();
   const canLearn = canStartNew({ progress, engine, now: t });
   const lock = bossLock(cardList(progress), allNodesDone(tier, progress), engine, t);
+
+  // Le Gardien vaincu, la Carte s'ouvre sur la Ville. Le Port reste à portée.
+  const showCity = view ? view === 'city' : bossBeaten(content, progress);
+  const toggle = cityOpen(content, progress) ? (
+    <Pressable accessibilityRole="button" testID="map-toggle" onPress={() => setView(showCity ? 'port' : 'city')}>
+      <Text style={styles.toggle}>{showCity ? 'Revoir le chemin du Port' : 'Aller à la Ville'}</Text>
+    </Pressable>
+  ) : null;
+
+  if (showCity) {
+    return (
+      <SafeAreaView style={styles.screen} edges={['top']}>
+        <ScrollView contentContainerStyle={styles.content}>
+          <CityMap engine={engine} />
+          {toggle}
+        </ScrollView>
+      </SafeAreaView>
+    );
+  }
 
   const open = (node: TierNode) => {
     if (node.kind === 'boss') {
@@ -49,6 +71,7 @@ export default function MapScreen() {
         <Text accessibilityRole="header" style={styles.title}>
           La Carte
         </Text>
+        {toggle}
         {notice ? <Text style={styles.notice} testID="socle-notice">{notice}</Text> : null}
 
         <View style={styles.path}>
@@ -128,4 +151,5 @@ const styles = StyleSheet.create({
   status: { color: colors.inkQuiet, fontSize: 13 },
   statusDone: { color: colors.good },
   lockInfo: { color: colors.inkQuiet, fontSize: 12, lineHeight: 17, marginTop: 4 },
+  toggle: { color: colors.inkQuiet, fontSize: 14, textDecorationLine: 'underline', paddingVertical: 10 },
 });

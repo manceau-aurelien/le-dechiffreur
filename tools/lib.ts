@@ -5,6 +5,7 @@ import {
   AuthoredExerciseSchema,
   BossSchema,
   BrickSchema,
+  CitySchema,
   FormulaSchema,
   SentenceSchema,
   TierSchema,
@@ -12,17 +13,23 @@ import {
   type AuthoredExercise,
   type Boss,
   type Brick,
+  type City,
   type Formula,
   type Sentence,
   type Tier,
   type Trap,
 } from '../src/content/schema.ts';
+import { mergeTier } from '../src/content/merge.ts';
 
 export const TIER_DIR = join('content', 'tiers', 'tier-01');
+const CITY_DIR = join('content', 'tiers', 'tier-02');
 const read = (name: string) => JSON.parse(readFileSync(join(TIER_DIR, name), 'utf8'));
+const both = (name: string) => [...read(name), ...JSON.parse(readFileSync(join(CITY_DIR, name), 'utf8'))];
 
 export interface Content {
   tier: Tier;
+  port: Tier;
+  city: City;
   bricks: Brick[];
   boss: Boss;
   sentences: Sentence[];
@@ -32,14 +39,18 @@ export interface Content {
 }
 
 export function loadContent(): Content {
+  const port = TierSchema.parse(read('tier.json'));
+  const city = CitySchema.parse(JSON.parse(readFileSync(join(CITY_DIR, 'city.json'), 'utf8')));
   return {
-    tier: TierSchema.parse(read('tier.json')),
-    bricks: z.array(BrickSchema).parse(read('bricks.json')),
+    tier: mergeTier(port, city),
+    port,
+    city,
+    bricks: z.array(BrickSchema).parse(both('bricks.json')),
     boss: BossSchema.parse(read('boss.json')),
-    sentences: z.array(SentenceSchema).parse(read('sentences.json')),
-    formulas: z.array(FormulaSchema).parse(read('formulas.json')),
-    traps: z.array(TrapSchema).parse(read('traps.json')),
-    exercises: z.array(AuthoredExerciseSchema).parse(read('exercises.json')),
+    sentences: z.array(SentenceSchema).parse(both('sentences.json')),
+    formulas: z.array(FormulaSchema).parse(both('formulas.json')),
+    traps: z.array(TrapSchema).parse(both('traps.json')),
+    exercises: z.array(AuthoredExerciseSchema).parse(both('exercises.json')),
   };
 }
 

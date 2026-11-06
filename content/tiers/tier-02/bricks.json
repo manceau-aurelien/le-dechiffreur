@@ -1,0 +1,293 @@
+[
+ {
+  "id": "b.apple",
+  "en": "apple",
+  "fr": [
+   "pomme"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.01",
+  "confusableWith": [],
+  "note": "Commence par un son de voyelle : an apple."
+ },
+ {
+  "id": "b.egg",
+  "en": "egg",
+  "fr": [
+   "œuf"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.01",
+  "confusableWith": [],
+  "note": "Commence par un son de voyelle : an egg."
+ },
+ {
+  "id": "b.orange",
+  "en": "orange",
+  "fr": [
+   "orange"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.01",
+  "confusableWith": [],
+  "note": "Commence par un son de voyelle : an orange."
+ },
+ {
+  "id": "b.bread",
+  "en": "bread",
+  "fr": [
+   "pain"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.01",
+  "confusableWith": [],
+  "note": "Se dit presque comme « brède »."
+ },
+ {
+  "id": "b.milk",
+  "en": "milk",
+  "fr": [
+   "lait"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.01",
+  "confusableWith": []
+ },
+ {
+  "id": "b.market",
+  "en": "market",
+  "fr": [
+   "marché"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.01",
+  "confusableWith": []
+ },
+ {
+  "id": "b.much",
+  "en": "much",
+  "fr": [
+   "beaucoup"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.02",
+  "confusableWith": [],
+  "note": "Tu connais how. How much veut dire combien : il demande un prix."
+ },
+ {
+  "id": "b.dollars",
+  "en": "dollars",
+  "fr": [
+   "dollars"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.02",
+  "confusableWith": []
+ },
+ {
+  "id": "b.cheap",
+  "en": "cheap",
+  "fr": [
+   "pas cher",
+   "bon marché"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.02",
+  "confusableWith": [
+   "b.expensive"
+  ]
+ },
+ {
+  "id": "b.expensive",
+  "en": "expensive",
+  "fr": [
+   "cher"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.02",
+  "confusableWith": [
+   "b.cheap"
+  ]
+ },
+ {
+  "id": "b.money",
+  "en": "money",
+  "fr": [
+   "argent"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.02",
+  "confusableWith": [],
+  "note": "Money, c'est l'argent en général."
+ },
+ {
+  "id": "b.two",
+  "en": "two",
+  "fr": [
+   "deux"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.02",
+  "confusableWith": [
+   "b.ten",
+   "b.twenty"
+  ]
+ },
+ {
+  "id": "b.five",
+  "en": "five",
+  "fr": [
+   "cinq"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.02",
+  "confusableWith": [
+   "b.four"
+  ]
+ },
+ {
+  "id": "b.want",
+  "en": "want",
+  "fr": [
+   "vouloir"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.03",
+  "confusableWith": [],
+  "note": "I want, you want, we want, they want."
+ },
+ {
+  "id": "b.some",
+  "en": "some",
+  "fr": [
+   "du",
+   "de la"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.03",
+  "confusableWith": [],
+  "note": "Une certaine quantité : some bread, some milk."
+ },
+ {
+  "id": "b.seller",
+  "en": "seller",
+  "fr": [
+   "vendeur",
+   "vendeuse"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.03",
+  "confusableWith": []
+ },
+ {
+  "id": "b.for",
+  "en": "for",
+  "fr": [
+   "pour"
+  ],
+  "kind": "word",
+  "tracked": true,
+  "nodeId": "n.2.03",
+  "confusableWith": []
+ },
+ {
+  "id": "b.apples",
+  "en": "apples",
+  "fr": [
+   "pommes"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.plural",
+  "nodeId": "n.2.04",
+  "confusableWith": [
+   "b.apple"
+  ]
+ },
+ {
+  "id": "b.eggs",
+  "en": "eggs",
+  "fr": [
+   "œufs"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.plural",
+  "nodeId": "n.2.04",
+  "confusableWith": [
+   "b.egg"
+  ]
+ },
+ {
+  "id": "b.oranges",
+  "en": "oranges",
+  "fr": [
+   "oranges"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.plural",
+  "nodeId": "n.2.04",
+  "confusableWith": [
+   "b.orange"
+  ]
+ },
+ {
+  "id": "b.keys",
+  "en": "keys",
+  "fr": [
+   "clés"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.plural",
+  "nodeId": "n.2.04",
+  "confusableWith": [
+   "b.key"
+  ]
+ },
+ {
+  "id": "b.coins",
+  "en": "coins",
+  "fr": [
+   "pièces"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.plural",
+  "nodeId": "n.2.04",
+  "confusableWith": [
+   "b.coin"
+  ]
+ },
+ {
+  "id": "b.bags",
+  "en": "bags",
+  "fr": [
+   "sacs"
+  ],
+  "kind": "tool",
+  "tracked": false,
+  "ownerFormula": "f.plural",
+  "nodeId": "n.2.04",
+  "confusableWith": [
+   "b.bag"
+  ]
+ }
+]

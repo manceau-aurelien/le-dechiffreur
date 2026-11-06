@@ -25,7 +25,8 @@ export async function migrateLegacy(engine: SrsEngine): Promise<void> {
   if (!raw) return;
   const legacy: LegacyProgress = JSON.parse(raw);
   const empty = emptyProgress();
-  const next: ProgressSnapshot = { ...empty, nodes: legacy.nodes ?? {}, bricks: legacy.bricks ?? {}, devUnlockAll: !!legacy.devUnlockAll };
+  // cards doit être un objet à part : sinon, comparé à empty, rien ne semble avoir changé et rien n'est enregistré.
+  const next: ProgressSnapshot = { ...empty, nodes: legacy.nodes ?? {}, bricks: legacy.bricks ?? {}, cards: {}, devUnlockAll: !!legacy.devUnlockAll };
   const acquire = (id: string, at: number) => {
     next.cards[id] = reviewCard(newCard(id, engine, at), 'good', engine, at);
   };

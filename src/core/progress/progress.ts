@@ -36,14 +36,15 @@ export function nodeStatus(tier: Tier, p: ProgressSnapshot, node: TierNode): Nod
   if (own?.status === 'in_progress') return 'in_progress';
   if (p.devUnlockAll) return 'available';
   if (node.kind === 'boss') return p.bossOpened ? 'available' : 'locked';
-  const index = tier.nodes.findIndex((n) => n.id === node.id);
-  const previous = tier.nodes[index - 1];
+  // Le chemin est propre à chaque quartier : son premier nœud se juge à l'entrée du quartier.
+  const path = tier.nodes.filter((n) => n.districtId === node.districtId);
+  const previous = path[path.findIndex((n) => n.id === node.id) - 1];
   if (!previous) return 'available';
   return p.nodes[previous.id]?.status === 'completed' ? 'available' : 'locked';
 }
 
 export function allNodesDone(tier: Tier, p: ProgressSnapshot): boolean {
-  return tier.nodes.filter((n) => n.kind !== 'boss').every((n) => p.nodes[n.id]?.status === 'completed');
+  return tier.nodes.filter((n) => n.kind !== 'boss' && !n.districtId).every((n) => p.nodes[n.id]?.status === 'completed');
 }
 
 /** Ouvre la porte dès que les conditions sont réunies. Elle ne se referme jamais. */

@@ -1,8 +1,9 @@
 import { Redirect, router } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { lessonContent as content, bricks, tier } from '../../content';
-import { isComeback, needsOnboarding, nextObjective, steleProgress, steleWords, toRunes } from '../../core/progress/collections';
+import { city, lessonContent as content, bricks, tier } from '../../content';
+import { bossBeaten } from '../../core/progress/city';
+import { isComeback, needsOnboarding, nextObjective, nodeIsVisible, steleProgress, steleWords, toRunes } from '../../core/progress/collections';
 import { bricksLearned, cardList } from '../../core/progress/progress';
 import { computeSocle, SOCLE_FOR_NEW_NODE, WEAR_LABEL, wearCounts, type Wear } from '../../core/srs/memory';
 import { useProgress } from '../../data/ProgressContext';
@@ -36,16 +37,17 @@ export default function CampScreen() {
   const wear = wearCounts(cards, engine, t);
   const words = steleWords(tier.stele.en, bricks, progress);
   const stele = steleProgress(words);
-  const total = bricks.filter((b) => b.tracked).length;
+  const total = bricks.filter((b) => b.tracked && nodeIsVisible(content, progress, b.nodeId)).length;
+  const inCity = bossBeaten(content, progress);
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
       <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.head}>
           <View>
-            <Text style={styles.quiet}>{`Palier ${tier.order}`}</Text>
+            <Text style={styles.quiet}>{`Palier ${inCity ? city.order : tier.order}`}</Text>
             <Text accessibilityRole="header" style={styles.title}>
-              {tier.title}
+              {inCity ? city.title : tier.title}
             </Text>
           </View>
           <Pressable accessibilityRole="button" testID="to-settings" onPress={() => router.push('/reglages')}>
@@ -58,6 +60,7 @@ export default function CampScreen() {
         <PrimaryButton label="Partir 5 minutes" testID="expedition" onPress={() => router.push('/expedition')} />
         <Text style={styles.objective} testID="objective">{nextObjective(content, progress, engine, t)}</Text>
 
+        {inCity ? <QuietButton label="Aller à la Ville" testID="to-city" onPress={() => router.navigate('/carte')} /> : null}
         {progress.bossOpened || progress.devUnlockAll ? (
           <QuietButton label="Aller à la Porte" testID="to-door" onPress={() => router.push('/antichambre')} />
         ) : null}

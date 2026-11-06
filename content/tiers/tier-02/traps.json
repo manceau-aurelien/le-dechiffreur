@@ -1,0 +1,38 @@
+[
+ {
+  "id": "t.17",
+  "title": "Une pomme",
+  "kind": "calque",
+  "fr": "Une pomme.",
+  "en": "An apple.",
+  "lesson": "Devant un son de voyelle : an, pas a.",
+  "exerciseIds": [
+   "x.m06"
+  ],
+  "linkedSentenceId": "s.m01"
+ },
+ {
+  "id": "t.18",
+  "title": "La monnaie",
+  "kind": "false_friend",
+  "fr": "L'argent.",
+  "en": "Money.",
+  "lesson": "Money, c'est l'argent en général, pas seulement les pièces qu'on te rend.",
+  "exerciseIds": [
+   "x.m07"
+  ],
+  "linkedSentenceId": "s.m18"
+ },
+ {
+  "id": "t.19",
+  "title": "Du pain",
+  "kind": "calque",
+  "fr": "Je veux du pain.",
+  "en": "I want some bread.",
+  "lesson": "Du pain, du lait : some, jamais of the.",
+  "exerciseIds": [
+   "x.m08"
+  ],
+  "linkedSentenceId": "s.m22"
+ }
+]

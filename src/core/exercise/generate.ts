@@ -18,15 +18,21 @@ export function nodeIndex(content: LessonContent, nodeId: string): number {
   return content.tier.nodes.findIndex((n) => n.id === nodeId);
 }
 
-/** Une brique est disponible à partir de son nœud d'introduction. */
-export function bricksUpTo(content: LessonContent, nodeId: string): Brick[] {
-  const limit = nodeIndex(content, nodeId);
-  return content.bricks.filter((b) => nodeIndex(content, b.nodeId) <= limit);
+/** Depuis un nœud, voit-on un autre nœud ? Un quartier ne dépend que du Port et de lui-même. */
+export function isBeforeOrSame(content: LessonContent, otherId: string, nodeId: string): boolean {
+  const other = content.tier.nodes.find((n) => n.id === otherId);
+  const node = content.tier.nodes.find((n) => n.id === nodeId);
+  if (!other || !node || nodeIndex(content, otherId) > nodeIndex(content, nodeId)) return false;
+  return !other.districtId || other.districtId === node.districtId;
+}
+
+/** Une brique est disponible à partir de son nœud d'introduction, ou dès que le joueur la connaît. */
+export function bricksUpTo(content: LessonContent, nodeId: string, known?: ReadonlySet<string>): Brick[] {
+  return content.bricks.filter((b) => isBeforeOrSame(content, b.nodeId, nodeId) || known?.has(b.id));
 }
 
 export function sentencesUpTo(content: LessonContent, nodeId: string): Sentence[] {
-  const limit = nodeIndex(content, nodeId);
-  return content.sentences.filter((s) => nodeIndex(content, s.minNodeId) <= limit);
+  return content.sentences.filter((s) => isBeforeOrSame(content, s.minNodeId, nodeId));
 }
 
 export function brick(content: LessonContent, id: string): Brick {
@@ -67,7 +73,7 @@ export function brickExercise(
   known?: ReadonlySet<string>,
 ): Exercise {
   const target = brick(content, brickId);
-  const available = bricksUpTo(content, nodeId).filter((b) => b.tracked && b.id !== brickId);
+  const available = bricksUpTo(content, nodeId, known).filter((b) => b.tracked && b.id !== brickId);
   const availableIds = new Set(available.map((b) => b.id));
   const isKnown = (id: string) => !known || known.has(id);
   const near = target.confusableWith.filter((id) => availableIds.has(id));
@@ -96,7 +102,8 @@ const ARTICLES = ['b.a', 'b.an', 'b.the'];
 
 /** Intruses d'un assemblage : formes voisines d'abord, pour tester la règle et non la mémoire visuelle. */
 function intruders(s: Sentence, content: LessonContent, nodeId: string, rng: Rng, known?: ReadonlySet<string>): string[] {
-  const available = new Set(bricksUpTo(content, nodeId).filter((b) => !known || !b.tracked || known.has(b.id)).map((b) => b.id));
+  const reachable = bricksUpTo(content, nodeId, known);
+  const available = new Set(reachable.filter((b) => !known || !b.tracked || known.has(b.id)).map((b) => b.id));
   const candidates: string[] = [];
   for (const id of s.bricks) {
     candidates.push(...brick(content, id).confusableWith);
@@ -105,7 +112,7 @@ function intruders(s: Sentence, content: LessonContent, nodeId: string, rng: Rng
     if (ARTICLES.includes(id)) candidates.push(...ARTICLES);
   }
   const unique = [...new Set(candidates)].filter((id) => available.has(id) && !s.bricks.includes(id));
-  const fill = shuffled(bricksUpTo(content, nodeId).filter((b) => b.tracked && available.has(b.id) && !s.bricks.includes(b.id) && !unique.includes(b.id)), rng).map((b) => b.id);
+  const fill = shuffled(reachable.filter((b) => b.tracked && available.has(b.id) && !s.bricks.includes(b.id) && !unique.includes(b.id)), rng).map((b) => b.id);
   return [...shuffled(unique, rng), ...fill].slice(0, s.bricks.length <= 2 ? 2 : 3);
 }
 
@@ -134,7 +141,7 @@ export function versionExercise(sentenceId: string, content: LessonContent, rng:
   const s = sentence(content, sentenceId);
   const own = frenchTiles(s);
   const peers = content.sentences.filter(
-    (o) => o.id !== s.id && nodeIndex(content, o.minNodeId) <= nodeIndex(content, s.minNodeId) && o.formulaIds[0] === s.formulaIds[0],
+    (o) => o.id !== s.id && isBeforeOrSame(content, o.minNodeId, s.minNodeId) && o.formulaIds[0] === s.formulaIds[0],
   );
   const extra = shuffled(peers.flatMap(frenchTiles).filter((w) => !own.includes(w)), rng);
   const intruderTiles = [...new Set(extra)].slice(0, 2);

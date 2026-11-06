@@ -77,9 +77,15 @@ export interface WallGroup {
   bricks: WallBrick[];
 }
 
+/** Un quartier n'apparaît dans les collections qu'une fois visité : rien n'est dévoilé d'avance. */
+export const nodeIsVisible = (c: LessonContent, p: ProgressSnapshot, nodeId: string) => {
+  const node = c.tier.nodes.find((n) => n.id === nodeId);
+  return !!node && (!node.districtId || c.tier.nodes.some((n) => n.districtId === node.districtId && p.nodes[n.id]));
+};
+
 export function wallGroups(content: LessonContent, p: ProgressSnapshot, engine: SrsEngine, now: number): WallGroup[] {
   return content.tier.nodes
-    .filter((n) => n.kind === 'vein')
+    .filter((n) => n.kind === 'vein' && nodeIsVisible(content, p, n.id))
     .map((node) => ({
       node,
       bricks: (node.brickIds ?? []).map((id) => {
@@ -120,14 +126,19 @@ export interface FormulaEntry {
 }
 
 export const formulaEntries = (c: LessonContent, p: ProgressSnapshot): FormulaEntry[] =>
-  c.formulas.map((formula) => ({ formula, unsealed: !!p.cards[formula.id] }));
+  c.formulas
+    .filter((formula) => nodeIsVisible(c, p, c.tier.nodes.find((n) => n.formulaId === formula.id)?.id ?? ''))
+    .map((formula) => ({ formula, unsealed: !!p.cards[formula.id] }));
 
 export interface TrapEntry {
   trap: Trap;
   met: boolean;
 }
 
-export const trapEntries = (c: LessonContent, p: ProgressSnapshot): TrapEntry[] => c.traps.map((trap) => ({ trap, met: !!p.cards[trap.id] }));
+export const trapEntries = (c: LessonContent, p: ProgressSnapshot): TrapEntry[] =>
+  c.traps
+    .filter((trap) => nodeIsVisible(c, p, c.tier.nodes.find((n) => n.trapIds?.includes(trap.id))?.id ?? ''))
+    .map((trap) => ({ trap, met: !!p.cards[trap.id] }));
 
 /** Les notes d'Anna déjà découvertes : celles des nœuds commencés, dans l'ordre de la carte. */
 export function annaNotes(c: LessonContent, p: ProgressSnapshot): { key: string; text: string }[] {
@@ -139,7 +150,11 @@ export function annaNotes(c: LessonContent, p: ProgressSnapshot): { key: string;
 /** Le prochain objectif, en une ligne. */
 export function nextObjective(c: LessonContent, p: ProgressSnapshot, engine: SrsEngine, now: number): string {
   const bossNode = c.tier.nodes.find((n) => n.kind === 'boss');
-  if (bossNode && p.nodes[bossNode.id]?.status === 'completed') return 'La Porte est ouverte. La bibliothèque t’attend.';
+  if (bossNode && p.nodes[bossNode.id]?.status === 'completed') {
+    const current = c.tier.nodes.find((n) => n.districtId && nodeIsVisible(c, p, n.id) && p.nodes[n.id]?.status !== 'completed');
+    if (current) return current.kind === 'formula' ? `Formule à prouver : ${current.title}.` : `Prochain filon : ${current.title}.`;
+    return 'La Porte est ouverte. La Ville t’attend : choisis ton quartier.';
+  }
   const cards = cardList(p);
   const socle = computeSocle(cards, engine, now);
   if (allNodesDone(c.tier, p)) {
@@ -148,7 +163,7 @@ export function nextObjective(c: LessonContent, p: ProgressSnapshot, engine: Srs
   }
   if (!p.devUnlockAll && socle < SOCLE_FOR_NEW_NODE) return 'Entretiens tes briques : le socle doit remonter à 70 %.';
   const next = c.tier.nodes
-    .filter((n) => n.kind !== 'boss' && p.nodes[n.id]?.status !== 'completed')
+    .filter((n) => n.kind !== 'boss' && !n.districtId && p.nodes[n.id]?.status !== 'completed')
     .sort((a, b) => nodeIndex(c, a.id) - nodeIndex(c, b.id))[0];
   return next.kind === 'formula' ? `Formule à prouver : ${next.title}.` : `Prochain filon : ${next.title}.`;
 }

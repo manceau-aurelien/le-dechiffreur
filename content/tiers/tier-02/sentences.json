@@ -1,0 +1,717 @@
+[
+ {
+  "id": "s.m01",
+  "en": "It is an apple.",
+  "fr": "C'est une pomme.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.an",
+   "b.apple"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m02",
+  "en": "This is an egg.",
+  "fr": "C'est un œuf.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.this",
+   "b.is",
+   "b.an",
+   "b.egg"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m03",
+  "en": "The bread is here.",
+  "fr": "Le pain est ici.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.bread",
+   "b.is",
+   "b.here"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m04",
+  "en": "The milk is cold.",
+  "fr": "Le lait est froid.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.milk",
+   "b.is",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m05",
+  "en": "It is an orange.",
+  "fr": "C'est une orange.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.an",
+   "b.orange"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m06",
+  "en": "The market is there.",
+  "fr": "Le marché est là-bas.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.market",
+   "b.is",
+   "b.there"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m07",
+  "en": "Is the bread cold?",
+  "fr": "Est-ce que le pain est froid ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.is",
+   "b.the",
+   "b.bread",
+   "b.cold"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m08",
+  "en": "Where is the market?",
+  "fr": "Où est le marché ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.where",
+   "b.is",
+   "b.the",
+   "b.market"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.m09",
+  "en": "The apple isn't in the bag.",
+  "fr": "La pomme n'est pas dans le sac.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.apple",
+   "b.isnt",
+   "b.in",
+   "b.the",
+   "b.bag"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.2.01",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m10",
+  "en": "How much is this?",
+  "fr": "Combien ça coûte ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.how",
+   "b.much",
+   "b.is",
+   "b.this"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m11",
+  "en": "How much is the bread?",
+  "fr": "Combien coûte le pain ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.how",
+   "b.much",
+   "b.is",
+   "b.the",
+   "b.bread"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m12",
+  "en": "It is ten dollars.",
+  "fr": "Ça coûte dix dollars.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.ten",
+   "b.dollars"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m13",
+  "en": "It is five dollars.",
+  "fr": "Ça coûte cinq dollars.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.five",
+   "b.dollars"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m14",
+  "en": "The apple is cheap.",
+  "fr": "La pomme n'est pas chère.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.apple",
+   "b.is",
+   "b.cheap"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m15",
+  "en": "The car is expensive.",
+  "fr": "La voiture est chère.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.car",
+   "b.is",
+   "b.expensive"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m16",
+  "en": "This bag isn't cheap.",
+  "fr": "Ce sac n'est pas bon marché.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.this",
+   "b.bag",
+   "b.isnt",
+   "b.cheap"
+  ],
+  "formulaIds": [
+   "f.not"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m17",
+  "en": "Is it expensive?",
+  "fr": "Est-ce que c'est cher ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.is",
+   "b.it",
+   "b.expensive"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m18",
+  "en": "My money is in the bag.",
+  "fr": "Mon argent est dans le sac.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.my",
+   "b.money",
+   "b.is",
+   "b.in",
+   "b.the",
+   "b.bag"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m19",
+  "en": "Your money is here.",
+  "fr": "Ton argent est ici.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.your",
+   "b.money",
+   "b.is",
+   "b.here"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m20",
+  "en": "It is two dollars.",
+  "fr": "Ça coûte deux dollars.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.it",
+   "b.is",
+   "b.two",
+   "b.dollars"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.02",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.m21",
+  "en": "I want an apple, please.",
+  "fr": "Je veux une pomme, s'il te plaît.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.want",
+   "b.an",
+   "b.apple",
+   "b.please"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m22",
+  "en": "I want some bread.",
+  "fr": "Je veux du pain.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.want",
+   "b.some",
+   "b.bread"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m23",
+  "en": "We want some milk, please.",
+  "fr": "Nous voulons du lait, s'il te plaît.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.we",
+   "b.want",
+   "b.some",
+   "b.milk",
+   "b.please"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m24",
+  "en": "The seller is a woman.",
+  "fr": "La vendeuse est une femme.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.seller",
+   "b.is",
+   "b.a",
+   "b.woman"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m25",
+  "en": "This is for you.",
+  "fr": "C'est pour toi.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.this",
+   "b.is",
+   "b.for",
+   "b.you"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m26",
+  "en": "The bread is for my friend.",
+  "fr": "Le pain est pour mon ami.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.bread",
+   "b.is",
+   "b.for",
+   "b.my",
+   "b.friend"
+  ],
+  "formulaIds": [
+   "f.be"
+  ],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m27",
+  "en": "They want an orange.",
+  "fr": "Ils veulent une orange.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.they",
+   "b.want",
+   "b.an",
+   "b.orange"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m28",
+  "en": "Who is the seller?",
+  "fr": "Qui est le vendeur ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.who",
+   "b.is",
+   "b.the",
+   "b.seller"
+  ],
+  "formulaIds": [
+   "f.q"
+  ],
+  "minNodeId": "n.2.03",
+  "guardianAudio": true
+ },
+ {
+  "id": "s.m29",
+  "en": "I want this, thank you.",
+  "fr": "Je veux ceci, merci.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.want",
+   "b.this",
+   "b.thank-you"
+  ],
+  "formulaIds": [],
+  "minNodeId": "n.2.03",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m30",
+  "en": "They are apples.",
+  "fr": "Ce sont des pommes.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.they",
+   "b.are",
+   "b.apples"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m31",
+  "en": "They are eggs.",
+  "fr": "Ce sont des œufs.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.they",
+   "b.are",
+   "b.eggs"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m32",
+  "en": "The keys are here.",
+  "fr": "Les clés sont ici.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.keys",
+   "b.are",
+   "b.here"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m33",
+  "en": "The coins are in the bag.",
+  "fr": "Les pièces sont dans le sac.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.coins",
+   "b.are",
+   "b.in",
+   "b.the",
+   "b.bag"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m34",
+  "en": "The bags are cheap.",
+  "fr": "Les sacs ne sont pas chers.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.bags",
+   "b.are",
+   "b.cheap"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m35",
+  "en": "Two apples, please.",
+  "fr": "Deux pommes, s'il te plaît.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.two",
+   "b.apples",
+   "b.please"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m36",
+  "en": "Are the oranges expensive?",
+  "fr": "Est-ce que les oranges sont chères ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.are",
+   "b.the",
+   "b.oranges",
+   "b.expensive"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m37",
+  "en": "The eggs aren't here.",
+  "fr": "Les œufs ne sont pas ici.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.the",
+   "b.eggs",
+   "b.arent",
+   "b.here"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m38",
+  "en": "I want two eggs.",
+  "fr": "Je veux deux œufs.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.i",
+   "b.want",
+   "b.two",
+   "b.eggs"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m39",
+  "en": "How much are the oranges?",
+  "fr": "Combien coûtent les oranges ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.how",
+   "b.much",
+   "b.are",
+   "b.the",
+   "b.oranges"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m40",
+  "en": "They are four dollars.",
+  "fr": "Elles coûtent quatre dollars.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.they",
+   "b.are",
+   "b.four",
+   "b.dollars"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m41",
+  "en": "My keys are in your bag.",
+  "fr": "Mes clés sont dans ton sac.",
+  "acceptedEn": [],
+  "bricks": [
+   "b.my",
+   "b.keys",
+   "b.are",
+   "b.in",
+   "b.your",
+   "b.bag"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ },
+ {
+  "id": "s.m42",
+  "en": "Where are the coins?",
+  "fr": "Où sont les pièces ?",
+  "acceptedEn": [],
+  "bricks": [
+   "b.where",
+   "b.are",
+   "b.the",
+   "b.coins"
+  ],
+  "formulaIds": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "guardianAudio": false
+ }
+]

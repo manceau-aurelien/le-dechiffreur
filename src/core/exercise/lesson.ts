@@ -6,7 +6,7 @@ import {
   authoredExercise,
   brickExercise,
   formulaOf,
-  nodeIndex,
+  isBeforeOrSame,
   retryExercise,
   sentencesUpTo,
   shuffled,
@@ -85,7 +85,7 @@ export function composeVein(node: TierNode, content: LessonContent, progress: Pr
   // Ce que le joueur a déjà rencontré, enrichi brique après brique : rien d'inconnu dans les choix, si possible.
   const known = new Set(
     content.bricks
-      .filter((b) => b.tracked && (nodeIndex(content, b.nodeId) < nodeIndex(content, node.id) || progress.bricks[b.id]?.presentedAt))
+      .filter((b) => b.tracked && ((b.nodeId !== node.id && isBeforeOrSame(content, b.nodeId, node.id)) || progress.bricks[b.id]?.presentedAt))
       .map((b) => b.id),
   );
   if (fresh.length) {

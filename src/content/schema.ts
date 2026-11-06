@@ -53,6 +53,7 @@ export const NodeSchema = z.object({
   brickIds: z.array(z.string()).optional(),
   trapIds: z.array(z.string()).optional(),
   formulaId: z.string().optional(),
+  districtId: z.string().optional(), // absent pour le chemin du Port
 });
 
 export const TierSchema = z.object({
@@ -71,6 +72,30 @@ export const TierSchema = z.object({
     victory: z.string(),
   }),
   nodes: z.array(NodeSchema),
+});
+
+export const ReuseSchema = z.object({
+  element: z.string().regex(/^(b|f)\./), // la brique ou la formule du Port à maîtriser
+  word: z.string().min(1), // le mot à mettre en valeur dans les deux phrases
+  how: z.string().min(1),
+  beforeSentenceId: z.string(),
+  afterSentenceId: z.string(),
+});
+
+export const DistrictSchema = z.object({
+  id: z.string().regex(/^d\./),
+  title: z.string(),
+  promise: z.string().min(1), // ce que le joueur saura faire en vrai
+  reuses: z.array(ReuseSchema),
+  nodes: z.array(NodeSchema),
+});
+
+export const CitySchema = z.object({
+  id: z.string(),
+  order: z.number().int().positive(),
+  title: z.string(),
+  intro: z.string(),
+  districts: z.array(DistrictSchema).min(1),
 });
 
 export const SentenceSchema = z.object({
@@ -169,6 +194,9 @@ export type BossVariant = z.infer<typeof BossVariantSchema>;
 export type Boss = z.infer<typeof BossSchema>;
 export type Tier = z.infer<typeof TierSchema>;
 export type TierNode = z.infer<typeof NodeSchema>;
+export type Reuse = z.infer<typeof ReuseSchema>;
+export type District = z.infer<typeof DistrictSchema>;
+export type City = z.infer<typeof CitySchema>;
 export type Sentence = z.infer<typeof SentenceSchema>;
 export type Formula = z.infer<typeof FormulaSchema>;
 export type Trap = z.infer<typeof TrapSchema>;

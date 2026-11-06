@@ -1,0 +1,296 @@
+[
+ {
+  "id": "x.m01",
+  "type": "E10",
+  "targets": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "tokens": [
+   "The",
+   "keys",
+   "is",
+   "here."
+  ],
+  "wrongIndex": 2,
+  "replacements": [
+   "are",
+   "am",
+   "be"
+  ],
+  "correct": "are",
+  "pourquoi": "Keys, c'est plusieurs clés : le verbe est are.",
+  "aRetenir": "The keys are here",
+  "audioText": "The keys are here."
+ },
+ {
+  "id": "x.m02",
+  "type": "E10",
+  "targets": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "tokens": [
+   "The",
+   "egg",
+   "are",
+   "here."
+  ],
+  "wrongIndex": 1,
+  "replacements": [
+   "eggs",
+   "an egg",
+   "egges"
+  ],
+  "correct": "eggs",
+  "pourquoi": "Avec are, il en faut plusieurs : le mot prend un s.",
+  "aRetenir": "The eggs are here",
+  "audioText": "The eggs are here."
+ },
+ {
+  "id": "x.m03",
+  "type": "E10",
+  "targets": [
+   "f.plural"
+  ],
+  "minNodeId": "n.2.04",
+  "tokens": [
+   "The",
+   "coins",
+   "is",
+   "in",
+   "the",
+   "bag."
+  ],
+  "wrongIndex": 2,
+  "replacements": [
+   "are",
+   "am",
+   "be"
+  ],
+  "correct": "are",
+  "pourquoi": "Coins, c'est plusieurs pièces : le verbe est are.",
+  "aRetenir": "The coins are in the bag",
+  "audioText": "The coins are in the bag."
+ },
+ {
+  "id": "x.m04",
+  "type": "E9",
+  "targets": [
+   "f.plural"
+  ],
+  "prompt": "Ce sont des pommes.",
+  "audioText": "They are apples.",
+  "options": [
+   {
+    "text": "They are apples.",
+    "correct": true
+   },
+   {
+    "text": "They are an apples.",
+    "correct": false,
+    "pourquoi": "Pas de an devant un pluriel.",
+    "aRetenir": "They are apples"
+   },
+   {
+    "text": "They is apples.",
+    "correct": false,
+    "pourquoi": "Avec they, le verbe est are.",
+    "aRetenir": "They are apples"
+   }
+  ]
+ },
+ {
+  "id": "x.m05",
+  "type": "E9",
+  "targets": [
+   "f.plural"
+  ],
+  "prompt": "Deux œufs, s'il te plaît.",
+  "audioText": "Two eggs, please.",
+  "options": [
+   {
+    "text": "Two eggs, please.",
+    "correct": true
+   },
+   {
+    "text": "Two egg, please.",
+    "correct": false,
+    "pourquoi": "À partir de deux, le mot prend un s.",
+    "aRetenir": "Two eggs"
+   },
+   {
+    "text": "Two an eggs, please.",
+    "correct": false,
+    "pourquoi": "Pas de an après un nombre.",
+    "aRetenir": "Two eggs"
+   }
+  ]
+ },
+ {
+  "id": "x.m06",
+  "type": "E9",
+  "targets": [
+   "t.17"
+  ],
+  "prompt": "C'est une pomme.",
+  "audioText": "It is an apple.",
+  "options": [
+   {
+    "text": "It is an apple.",
+    "correct": true
+   },
+   {
+    "text": "It is a apple.",
+    "correct": false,
+    "pourquoi": "Apple commence par un son de voyelle.",
+    "aRetenir": "An apple, an egg, an orange"
+   },
+   {
+    "text": "It is apple.",
+    "correct": false,
+    "pourquoi": "Une chose au singulier prend a ou an.",
+    "aRetenir": "An apple, an egg, an orange"
+   }
+  ]
+ },
+ {
+  "id": "x.m07",
+  "type": "E9",
+  "targets": [
+   "t.18"
+  ],
+  "prompt": "Mon argent est dans le sac.",
+  "audioText": "My money is in the bag.",
+  "options": [
+   {
+    "text": "My money is in the bag.",
+    "correct": true
+   },
+   {
+    "text": "My monnaie is in the bag.",
+    "correct": false,
+    "pourquoi": "Monnaie n'est pas anglais.",
+    "aRetenir": "Money = l'argent"
+   },
+   {
+    "text": "My silver is in the bag.",
+    "correct": false,
+    "pourquoi": "Silver, c'est le métal.",
+    "aRetenir": "Money = l'argent"
+   }
+  ]
+ },
+ {
+  "id": "x.m08",
+  "type": "E9",
+  "targets": [
+   "t.19"
+  ],
+  "prompt": "Je veux du pain.",
+  "audioText": "I want some bread.",
+  "options": [
+   {
+    "text": "I want some bread.",
+    "correct": true
+   },
+   {
+    "text": "I want of the bread.",
+    "correct": false,
+    "pourquoi": "C'est du français traduit mot à mot.",
+    "aRetenir": "Du pain = some bread"
+   },
+   {
+    "text": "I want a bread.",
+    "correct": false,
+    "pourquoi": "Le pain ne se compte pas : pas de a.",
+    "aRetenir": "Du pain = some bread"
+   }
+  ]
+ },
+ {
+  "id": "x.m09",
+  "type": "E11",
+  "targets": [
+   "b.market"
+  ],
+  "minNodeId": "n.2.01",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.m08",
+  "options": [
+   {
+    "text": "Où est le marché ?",
+    "correct": true
+   },
+   {
+    "text": "Où est la bibliothèque ?",
+    "correct": false,
+    "pourquoi": "Library = bibliothèque. Ici, market.",
+    "aRetenir": "Where is the market? = où est le marché ?"
+   },
+   {
+    "text": "Qui est au marché ?",
+    "correct": false,
+    "pourquoi": "Where = où, who = qui.",
+    "aRetenir": "Where is the market? = où est le marché ?"
+   }
+  ]
+ },
+ {
+  "id": "x.m10",
+  "type": "E11",
+  "targets": [
+   "b.two",
+   "b.dollars"
+  ],
+  "minNodeId": "n.2.02",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.m20",
+  "options": [
+   {
+    "text": "Ça coûte deux dollars.",
+    "correct": true
+   },
+   {
+    "text": "Ça coûte dix dollars.",
+    "correct": false,
+    "pourquoi": "Two = deux, ten = dix.",
+    "aRetenir": "It is two dollars = ça coûte deux dollars."
+   },
+   {
+    "text": "Ça coûte vingt dollars.",
+    "correct": false,
+    "pourquoi": "Two = deux, twenty = vingt.",
+    "aRetenir": "It is two dollars = ça coûte deux dollars."
+   }
+  ]
+ },
+ {
+  "id": "x.m11",
+  "type": "E11",
+  "targets": [
+   "b.seller"
+  ],
+  "minNodeId": "n.2.03",
+  "prompt": "Que dit le Gardien ?",
+  "audioSentenceId": "s.m28",
+  "options": [
+   {
+    "text": "Qui est le vendeur ?",
+    "correct": true
+   },
+   {
+    "text": "Où est le vendeur ?",
+    "correct": false,
+    "pourquoi": "Who = qui, where = où.",
+    "aRetenir": "Who is the seller? = qui est le vendeur ?"
+   },
+   {
+    "text": "Qui est le marin ?",
+    "correct": false,
+    "pourquoi": "Seller = vendeur, sailor = marin.",
+    "aRetenir": "Who is the seller? = qui est le vendeur ?"
+   }
+  ]
+ }
+]

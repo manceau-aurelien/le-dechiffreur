@@ -4,7 +4,7 @@ import { listClips, loadContent, words } from './lib.ts';
 
 const errors: string[] = [];
 const content = loadContent();
-const { tier, bricks, boss, sentences, formulas, traps, exercises } = content;
+const { tier, city, bricks, boss, sentences, formulas, traps, exercises } = content;
 const byId = new Map(bricks.map((b) => [b.id, b]));
 const lower = (id: string) => byId.get(id)?.en.toLowerCase();
 
@@ -56,8 +56,13 @@ for (const t of traps) {
 }
 
 // Règle 2 : chaque mot d'une phrase est une brique déjà introduite à ce point de la carte.
-const introduced = (brickId: string, nodeId: string) =>
-  (nodeOrder.get(byId.get(brickId)?.nodeId ?? '') ?? Infinity) <= (nodeOrder.get(nodeId) ?? -1);
+// Un quartier ne dépend que du Port et de lui-même : ils se visitent dans n'importe quel ordre.
+const nodeById = new Map(tier.nodes.map((n) => [n.id, n]));
+const introduced = (brickId: string, nodeId: string) => {
+  const from = nodeById.get(byId.get(brickId)?.nodeId ?? '');
+  if (!from || (nodeOrder.get(from.id) ?? Infinity) > (nodeOrder.get(nodeId) ?? -1)) return false;
+  return !from.districtId || from.districtId === nodeById.get(nodeId)?.districtId;
+};
 for (const s of sentences) {
   if (!nodeOrder.has(s.minNodeId)) errors.push(`${s.id} : nœud inconnu ${s.minNodeId}`);
   if (!s.acceptedEn.every((a) => a.trim())) errors.push(`${s.id} : variante vide`);
@@ -117,6 +122,27 @@ for (const e of exercises) {
   }
   if (e.type === 'E11' && !sentenceById.get(e.audioSentenceId)?.guardianAudio) {
     errors.push(`${e.id} : la phrase n'a pas de clip avec la voix du Gardien`);
+  }
+}
+
+// Chaque quartier montre ce qu'il réutilise, avec de vraies phrases du Port et du quartier.
+unique('Quartiers', city.districts.map((d) => d.id));
+for (const d of city.districts) {
+  if (d.nodes.length && d.reuses.length < 4) errors.push(`${d.id} : au moins 4 fondamentaux réutilisés attendus`);
+  for (const r of d.reuses) {
+    const where = `${d.id}/${r.element}`;
+    checkElement(where, r.element);
+    if (r.element.startsWith('b.') && nodeById.get(byId.get(r.element)?.nodeId ?? '')?.districtId) errors.push(`${where} : ce n'est pas un fondamental du Port`);
+    const before = sentenceById.get(r.beforeSentenceId);
+    const after = sentenceById.get(r.afterSentenceId);
+    if (!before || nodeById.get(before.minNodeId)?.districtId) errors.push(`${where} : la phrase d'avant doit venir du Port`);
+    if (!after || nodeById.get(after.minNodeId)?.districtId !== d.id) errors.push(`${where} : la phrase d'après doit venir du quartier`);
+    for (const x of [before, after]) {
+      if (!x) continue;
+      if (!words(x.en).includes(r.word.toLowerCase())) errors.push(`${where} : « ${r.word} » absent de ${x.id}`);
+      const uses = r.element.startsWith('b.') ? x.bricks.includes(r.element) : x.formulaIds.includes(r.element);
+      if (!uses) errors.push(`${where} : ${x.id} n'utilise pas cet élément`);
+    }
   }
 }
 

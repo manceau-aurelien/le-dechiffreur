@@ -7,6 +7,7 @@ Jeu d'apprentissage de l'anglais pour francophones, en cours de prototype.
 ## État actuel : étapes 0 à 4 du plan
 
 Le palier 1 se joue de bout en bout : premier lancement, Camp, Expéditions, Carte, Mur, Carnet, Stèle et boss.
+Le palier 2, la Ville, a commencé : la carte des quartiers et le Marché sont jouables. L'Auberge, la Gare, les Maisons et le prochain Gardien restent à écrire.
 Il reste la finition (étape 5) : accessibilité, export de la progression, statistiques locales, voix définitives et builds de test.
 
 ## Lancer le jeu

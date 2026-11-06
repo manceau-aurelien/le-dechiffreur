@@ -44,9 +44,10 @@ export interface ExpeditionContext {
   budgetSeconds?: number;
 }
 
-/** Le prochain nœud à apprendre, boss exclu. */
+/** Le prochain nœud à apprendre, boss exclu : le Port, puis le quartier où le joueur est entré. Il choisit seul d'en ouvrir un autre. */
 export function nextNode(content: LessonContent, p: ProgressSnapshot): TierNode | undefined {
-  return content.tier.nodes.find((n) => n.kind !== 'boss' && p.nodes[n.id]?.status !== 'completed');
+  const pending = content.tier.nodes.filter((n) => n.kind !== 'boss' && p.nodes[n.id]?.status !== 'completed');
+  return pending.find((n) => !n.districtId) ?? pending.find((n) => content.tier.nodes.some((o) => o.districtId === n.districtId && p.nodes[o.id]));
 }
 
 /** Le dernier nœud dont les outils sont accessibles. */
@@ -56,18 +57,24 @@ function frontierId(content: LessonContent, p: ProgressSnapshot): string {
     const i = nodeIndex(content, next.id);
     return content.tier.nodes[Math.max(0, next.kind === 'vein' ? i : i - 1)].id;
   }
-  const lessons = content.tier.nodes.filter((n) => n.kind !== 'boss');
+  const lessons = content.tier.nodes.filter((n) => n.kind !== 'boss' && !n.districtId);
   return lessons[lessons.length - 1].id;
 }
 
 const brickOf = (c: LessonContent, id: string) => c.bricks.find((b) => b.id === id)!;
 
+/** Le contenu d'un nœud est-il atteint ? Sur le Port, jusqu'à la frontière ; dans un quartier, dès qu'on y a mis les pieds. */
+function nodeReached(content: LessonContent, p: ProgressSnapshot, nodeId: string): boolean {
+  const node = content.tier.nodes.find((n) => n.id === nodeId);
+  if (node?.districtId) return !!p.nodes[nodeId];
+  return nodeIndex(content, nodeId) <= nodeIndex(content, frontierId(content, p));
+}
+
 /** Une phrase n'est jouable en révision que si toutes ses briques et ses formules sont acquises. */
 function usableSentences(ctx: ExpeditionContext): Sentence[] {
   const { content, progress } = ctx;
-  const limit = nodeIndex(content, frontierId(content, progress));
   return content.sentences.filter((s) => {
-    if (nodeIndex(content, s.minNodeId) > limit) return false;
+    if (!nodeReached(content, progress, s.minNodeId)) return false;
     if (!s.formulaIds.every((f) => progress.cards[f])) return false;
     return s.bricks.every((id) => {
       const b = brickOf(content, id);
@@ -87,10 +94,9 @@ function brickLadder(stability: number): ExerciseType[] {
 }
 
 function authoredFor(ctx: ExpeditionContext, type: 'E10' | 'E11', elementId: string) {
-  const limit = nodeIndex(ctx.content, frontierId(ctx.content, ctx.progress));
   return ctx.content.exercises.filter((e) => {
     if (e.type !== type || !e.targets.includes(elementId)) return false;
-    return nodeIndex(ctx.content, e.minNodeId) <= limit;
+    return nodeReached(ctx.content, ctx.progress, e.minNodeId);
   });
 }
 

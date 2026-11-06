@@ -6,11 +6,19 @@ import formulasJson from '../../content/tiers/tier-01/formulas.json';
 import sentencesJson from '../../content/tiers/tier-01/sentences.json';
 import tierJson from '../../content/tiers/tier-01/tier.json';
 import trapsJson from '../../content/tiers/tier-01/traps.json';
+import cityBricksJson from '../../content/tiers/tier-02/bricks.json';
+import cityJson from '../../content/tiers/tier-02/city.json';
+import cityExercisesJson from '../../content/tiers/tier-02/exercises.json';
+import cityFormulasJson from '../../content/tiers/tier-02/formulas.json';
+import citySentencesJson from '../../content/tiers/tier-02/sentences.json';
+import cityTrapsJson from '../../content/tiers/tier-02/traps.json';
 import type { LessonContent } from '../core/exercise/types';
+import { mergeTier } from './merge';
 import {
   AuthoredExerciseSchema,
   BossSchema,
   BrickSchema,
+  CitySchema,
   FormulaSchema,
   SentenceSchema,
   TierSchema,
@@ -20,15 +28,16 @@ import {
 
 export const boss = BossSchema.parse(bossJson);
 export const tier = TierSchema.parse(tierJson);
-export const bricks = z.array(BrickSchema).parse(bricksJson);
+export const city = CitySchema.parse(cityJson);
+export const bricks = z.array(BrickSchema).parse([...bricksJson, ...cityBricksJson]);
 
 export const lessonContent: LessonContent = {
-  tier,
+  tier: mergeTier(tier, city),
   bricks,
-  sentences: z.array(SentenceSchema).parse(sentencesJson),
-  formulas: z.array(FormulaSchema).parse(formulasJson),
-  traps: z.array(TrapSchema).parse(trapsJson),
-  exercises: z.array(AuthoredExerciseSchema).parse(exercisesJson),
+  sentences: z.array(SentenceSchema).parse([...sentencesJson, ...citySentencesJson]),
+  formulas: z.array(FormulaSchema).parse([...formulasJson, ...cityFormulasJson]),
+  traps: z.array(TrapSchema).parse([...trapsJson, ...cityTrapsJson]),
+  exercises: z.array(AuthoredExerciseSchema).parse([...exercisesJson, ...cityExercisesJson]),
 };
 
 const byId = new Map<string, Brick>(bricks.map((b) => [b.id, b]));

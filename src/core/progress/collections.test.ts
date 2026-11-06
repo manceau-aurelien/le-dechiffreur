@@ -134,7 +134,7 @@ describe('Camp', () => {
     expect(nextObjective(content, p, engine, NOW)).toContain('prête');
     expect(nextObjective(content, { ...p, bossOpened: true }, engine, NOW)).toContain('Gardien');
     const won = finished(withCards(trackedIds), 13);
-    expect(nextObjective(content, won, engine, NOW)).toContain('bibliothèque');
+    expect(nextObjective(content, won, engine, NOW)).toContain('Ville');
   });
   it('accueille après une longue absence, jamais avant', () => {
     expect(isComeback(emptyProgress(), NOW)).toBe(false);

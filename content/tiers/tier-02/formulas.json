@@ -1,0 +1,122 @@
+[
+ {
+  "id": "f.plural",
+  "title": "La Formule du Pluriel",
+  "pattern": "Mot + s, et is devient are",
+  "ruleText": "À partir de deux, on ajoute s au mot : one key, two keys. Et le verbe suit : The key is here, the keys are here. Devant un pluriel, a et an disparaissent : an apple, mais apples.",
+  "clueSentenceIds": [
+   "s.m30",
+   "s.m31",
+   "s.m32",
+   "s.m33"
+  ],
+  "hypothesis": {
+   "question": "Qu'est-ce qui change quand il y en a plusieurs ?",
+   "options": [
+    {
+     "text": "Le mot prend un s, is devient are, et a ou an disparaît.",
+     "correct": true,
+     "why": "Oui : tes formules du Port s'adaptent au pluriel."
+    },
+    {
+     "text": "Seul le mot change, is reste pareil.",
+     "correct": false,
+     "why": "Regarde : the keys are here. Le verbe change aussi."
+    },
+    {
+     "text": "On garde a ou an devant le mot.",
+     "correct": false,
+     "why": "They are apples : plus de an devant un pluriel."
+    }
+   ]
+  },
+  "trial": {
+   "passMin": 5,
+   "positions": [
+    [
+     {
+      "type": "E10",
+      "id": "x.m01"
+     },
+     {
+      "type": "E10",
+      "id": "x.m02"
+     }
+    ],
+    [
+     {
+      "type": "E5",
+      "id": "s.m34"
+     },
+     {
+      "type": "E5",
+      "id": "s.m37"
+     }
+    ],
+    [
+     {
+      "type": "E6",
+      "id": "s.m35"
+     },
+     {
+      "type": "E6",
+      "id": "s.m38"
+     }
+    ],
+    [
+     {
+      "type": "E9",
+      "id": "x.m04"
+     },
+     {
+      "type": "E9",
+      "id": "x.m05"
+     }
+    ],
+    [
+     {
+      "type": "E10",
+      "id": "x.m03"
+     },
+     {
+      "type": "E5",
+      "id": "s.m42"
+     }
+    ],
+    [
+     {
+      "type": "E8",
+      "id": "s.m36"
+     },
+     {
+      "type": "E8",
+      "id": "s.m39"
+     }
+    ]
+   ]
+  },
+  "errorPatterns": [
+   {
+    "id": "pl1",
+    "match": "\\b(apples|eggs|oranges|keys|coins|bags|they) is\\b",
+    "pourquoi": "Avec un pluriel, is devient are.",
+    "aRetenir": "The keys are here",
+    "blame": "f.plural"
+   },
+   {
+    "id": "pl2",
+    "match": "\\b(two|four|five|ten|twenty) (apple|egg|orange|key|coin|bag)\\b",
+    "pourquoi": "À partir de deux, le mot prend un s.",
+    "aRetenir": "Two apples",
+    "blame": "f.plural"
+   },
+   {
+    "id": "pl3",
+    "match": "\\b(a|an) (apples|eggs|oranges|keys|coins|bags)\\b",
+    "pourquoi": "Pas de a ni de an devant un pluriel.",
+    "aRetenir": "They are apples",
+    "blame": "f.plural"
+   }
+  ]
+ }
+]

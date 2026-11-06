@@ -118,7 +118,7 @@ export function LessonRun({ plan, engine, onRestart }: Props) {
   }, [state.stage, progress.cards, startR, engine, now]);
 
   if (state.stage === 'trial_failed') {
-    const formula = formulaOf(content, tier.nodes.find((n) => n.id === plan.nodeId)!.formulaId!);
+    const formula = formulaOf(content, content.tier.nodes.find((n) => n.id === plan.nodeId)!.formulaId!);
     return (
       <ScreenFrame>
         <View style={styles.box} testID="trial-failed">
