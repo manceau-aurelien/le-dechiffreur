@@ -131,7 +131,7 @@ describe('Camp', () => {
   });
   it('accompagne vers la Porte, puis la bibliothèque', () => {
     const p = finished(withCards(trackedIds), 12);
-    expect(nextObjective(content, p, engine, NOW)).toContain('Consolide');
+    expect(nextObjective(content, p, engine, NOW)).toContain('prête');
     expect(nextObjective(content, { ...p, bossOpened: true }, engine, NOW)).toContain('Gardien');
     const won = finished(withCards(trackedIds), 13);
     expect(nextObjective(content, won, engine, NOW)).toContain('bibliothèque');

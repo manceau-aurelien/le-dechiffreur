@@ -6,7 +6,7 @@ import { tier } from '../../content';
 import type { TierNode } from '../../content/schema';
 import { allNodesDone, cardList, nodeStatus, type NodeStatus } from '../../core/progress/progress';
 import { canStartNew } from '../../core/session/expedition';
-import { bossLock } from '../../core/srs/memory';
+import { bossLock, doorAdvice } from '../../core/srs/memory';
 import { useProgress } from '../../data/ProgressContext';
 import { colors, MAX_WIDTH } from '../../ui/theme';
 
@@ -17,7 +17,6 @@ const STATUS_LABEL: Record<NodeStatus, string> = {
   completed: 'Terminé',
 };
 const KIND_LABEL: Record<TierNode['kind'], string> = { vein: 'Filon', formula: 'Formule', boss: 'Boss' };
-const percent = (x: number) => `${Math.round(x * 100)} %`;
 
 /** Le chemin des 13 nœuds. La Porte est visible dès le début (§2.5). */
 export default function MapScreen() {
@@ -56,14 +55,15 @@ export default function MapScreen() {
           {tier.nodes.map((node, i) => {
             const status = nodeStatus(tier, progress, node);
             const locked = status === 'locked';
+            const isBoss = node.kind === 'boss';
             return (
               <Pressable
                 key={node.id}
                 accessibilityRole="button"
-                accessibilityState={{ disabled: locked }}
+                accessibilityState={{ disabled: locked && !isBoss }}
                 accessibilityLabel={`${node.title}, ${STATUS_LABEL[status]}`}
                 testID={`node-${node.id}`}
-                disabled={locked}
+                disabled={locked && !isBoss}
                 onPress={() => open(node)}
                 style={({ pressed }) => [styles.row, pressed && styles.pressed]}
               >
@@ -80,10 +80,10 @@ export default function MapScreen() {
                 <View style={[styles.card, locked && styles.cardLocked, node.kind === 'boss' && styles.cardBoss]}>
                   <Text style={styles.kind}>{KIND_LABEL[node.kind]}</Text>
                   <Text style={[styles.nodeTitle, locked && styles.textLocked]}>{node.title}</Text>
-                  <Text style={[styles.status, status === 'completed' && styles.statusDone]}>{STATUS_LABEL[status]}</Text>
+                  <Text style={[styles.status, status === 'completed' && styles.statusDone]}>{isBoss && locked ? 'Fermée' : STATUS_LABEL[status]}</Text>
                   {node.kind === 'boss' && locked ? (
                     <Text style={styles.lockInfo} testID="boss-lock">
-                      {`${lock.nodesDone ? '12 nœuds terminés' : 'Termine les 12 nœuds'} · socle ${percent(lock.socle)} sur 80 % · consolidés ${percent(lock.consolidated)} sur 80 %`}
+                      {doorAdvice(lock)}
                     </Text>
                   ) : null}
                 </View>

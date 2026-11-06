@@ -5,7 +5,7 @@ import { createLessonState, currentStep, estimateSeconds, lessonReducer, type Le
 import type { CheckResult, Exercise, Rng } from '../exercise/types';
 import { allNodesDone, cardList, emptyProgress, refreshBossDoor, type ProgressSnapshot } from '../progress/progress';
 import { createFsrsEngine } from '../srs/fsrsEngine';
-import { bossLock, capDue, computeSocle, consolidatedShare, dayKey, isDue, needsListening, newCard, priorityOf, ratingFor, reviewCard, wearOf } from '../srs/memory';
+import { bossLock, doorAdvice, capDue, computeSocle, dayKey, isDue, needsListening, newCard, priorityOf, ratingFor, reviewCard, wearOf } from '../srs/memory';
 import type { SrsEngine } from '../srs/types';
 import { brickExercise } from '../exercise/generate';
 import { BUDGET_SECONDS, canStartNew, composeExpedition, composePreparation, ensureListening, exerciseForCard, hasUsefulWork, interleave, MAX_REVIEWS, nextNode, pendingTraps, varyForms } from './expedition';
@@ -332,7 +332,6 @@ describe('simulation de 60 jours', () => {
     expect(cardList(p).length).toBe(53 + 3 + 16); // toutes les briques, les formules et les pièges
     expect(stats.sessions).toBeLessThanOrEqual(120);
     expect(computeSocle(cardList(p), engine, now)).toBeGreaterThanOrEqual(0.8);
-    expect(consolidatedShare(cardList(p))).toBeGreaterThanOrEqual(0.8);
     // Les intervalles se sont allongés : la mémoire moyenne dépasse largement la bride de départ.
     const stabilities = cardList(p).map((c) => c.stability).sort((a, b) => a - b);
     expect(stabilities[Math.floor(stabilities.length / 2)]).toBeGreaterThan(5);
@@ -375,17 +374,24 @@ describe('simulation de 60 jours', () => {
 });
 
 describe('verrous', () => {
-  it('garde la porte fermée tant que les conditions manquent', () => {
-    const p = finished(withCards(allBrickIds, 0), 12);
-    const lock = bossLock(cardList(p), allNodesDone(content.tier, p), engine, START);
-    expect(lock.nodesDone).toBe(true);
-    expect(lock.consolidated).toBe(0);
-    expect(lock.open).toBe(false);
+  it("explique ce qui manque, dans l'ordre", () => {
+    const learned = withCards(allBrickIds, 0);
+    expect(doorAdvice(bossLock(cardList(learned), false, engine, START))).toContain('12 nœuds');
+    expect(doorAdvice(bossLock(cardList(learned), true, engine, START + 400 * DAY))).toContain('usées');
+    expect(doorAdvice(bossLock(cardList(learned), true, engine, START))).toContain('prête');
+  });
+  it('garde la porte fermée si le parcours est inachevé', () => {
+    const p = finished(withCards(allBrickIds, 0), 11);
+    expect(allNodesDone(content.tier, p)).toBe(false);
     expect(refreshBossDoor(content.tier, p, engine, START).bossOpened).toBe(false);
   });
-  it('ouvre la porte et ne la referme jamais', () => {
+  it('garde la porte fermée si le socle est trop bas', () => {
     const p = finished(withCards(allBrickIds, 0), 12);
-    for (const id of allBrickIds) p.cards[id] = { ...p.cards[id], distinctSuccessDays: 2 };
+    expect(refreshBossDoor(content.tier, p, engine, START + 400 * DAY).bossOpened).toBe(false);
+  });
+  it('ouvre la porte le jour même où le parcours est terminé, et ne la referme jamais', () => {
+    const p = finished(withCards(allBrickIds, 0), 12);
+    expect(cardList(p).every((c) => c.distinctSuccessDays === 1)).toBe(true);
     const opened = refreshBossDoor(content.tier, p, engine, START);
     expect(opened.bossOpened).toBe(true);
     expect(refreshBossDoor(content.tier, opened, engine, START + 1000 * DAY).bossOpened).toBe(true);

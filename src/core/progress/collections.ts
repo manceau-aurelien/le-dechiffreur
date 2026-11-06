@@ -2,7 +2,7 @@
 import type { Brick, Formula, Trap, TierNode } from '../../content/schema';
 import { nodeIndex } from '../exercise/generate';
 import type { LessonContent } from '../exercise/types';
-import { consolidatedShare, computeSocle, SOCLE_FOR_NEW_NODE, wearOf, type Wear } from '../srs/memory';
+import { bossLock, computeSocle, doorAdvice, SOCLE_FOR_NEW_NODE, wearOf, type Wear } from '../srs/memory';
 import type { SrsEngine } from '../srs/types';
 import { allNodesDone, cardList, type ProgressSnapshot } from './progress';
 
@@ -144,7 +144,7 @@ export function nextObjective(c: LessonContent, p: ProgressSnapshot, engine: Srs
   const socle = computeSocle(cards, engine, now);
   if (allNodesDone(c.tier, p)) {
     if (p.bossOpened) return 'La Porte s’offre à toi. Le Gardien t’attend.';
-    return `Consolide tes briques pour approcher la Porte : ${Math.round(consolidatedShare(cards) * 100)} % consolidées, socle à ${Math.round(socle * 100)} %.`;
+    return doorAdvice(bossLock(cards, true, engine, now));
   }
   if (!p.devUnlockAll && socle < SOCLE_FOR_NEW_NODE) return 'Entretiens tes briques : le socle doit remonter à 70 %.';
   const next = c.tier.nodes

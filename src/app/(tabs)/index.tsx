@@ -1,10 +1,9 @@
 import { Redirect, router } from 'expo-router';
-import { useEffect } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { lessonContent as content, bricks, tier } from '../../content';
 import { isComeback, needsOnboarding, nextObjective, steleProgress, steleWords, toRunes } from '../../core/progress/collections';
-import { bricksLearned, cardList, refreshBossDoor } from '../../core/progress/progress';
+import { bricksLearned, cardList } from '../../core/progress/progress';
 import { computeSocle, SOCLE_FOR_NEW_NODE, WEAR_LABEL, wearCounts, type Wear } from '../../core/srs/memory';
 import { useProgress } from '../../data/ProgressContext';
 import { PrimaryButton, QuietButton } from '../../ui/components';
@@ -16,11 +15,7 @@ const percent = (x: number) => `${Math.round(x * 100)} %`;
 
 /** Le Camp : un seul grand bouton, et de quoi voir où l'on en est. */
 export default function CampScreen() {
-  const { progress, engine, loaded, error, commit, now } = useProgress();
-
-  useEffect(() => {
-    if (engine) commit((p) => refreshBossDoor(tier, p, engine, now()));
-  }, [engine, commit, now, progress.clockOffsetMs]);
+  const { progress, engine, loaded, error, now } = useProgress();
 
   if (error) {
     return (

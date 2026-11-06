@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { emptyProgress, type ProgressSnapshot } from '../core/progress/progress';
+import { tier } from '../content';
+import { emptyProgress, refreshBossDoor, type ProgressSnapshot } from '../core/progress/progress';
 import { createFsrsEngine } from '../core/srs/fsrsEngine';
 import { newCard, reviewCard } from '../core/srs/memory';
 import type { ReviewLogEntry, SrsEngine } from '../core/srs/types';
@@ -88,6 +89,10 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     setProgress(next);
     repository.saveChange(prev, next, logs).catch((e) => setError(String(e)));
   }, []);
+
+  useEffect(() => {
+    if (engine) commit((p) => refreshBossDoor(tier, p, engine, Date.now() + p.clockOffsetMs));
+  }, [engine, commit, progress.clockOffsetMs]);
 
   const resetAll = useCallback(() => {
     latest.current = emptyProgress();

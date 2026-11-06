@@ -1,11 +1,12 @@
-import { Redirect, router } from 'expo-router';
+import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AUDIO_PROVIDER } from '../audio/audio-manifest';
 import { audio } from '../audio/AudioService';
 import { boss, brick, sayClip, tier } from '../content';
-import { nodeStatus } from '../core/progress/progress';
+import { allNodesDone, cardList, nodeStatus } from '../core/progress/progress';
+import { bossLock, doorAdvice, SOCLE_FOR_BOSS } from '../core/srs/memory';
 import { useProgress } from '../data/ProgressContext';
 import { goToMap } from '../ui/lesson/LessonRun';
 import { repository } from '../data/repository';
@@ -16,7 +17,7 @@ import { colors, MAX_WIDTH } from '../ui/theme';
 /** L'Antichambre : les règles, le test du son, puis l'entrée dans l'antre. */
 export default function Anteroom() {
   const { settings, setSettings } = useBossSession();
-  const { progress, loaded } = useProgress();
+  const { progress, engine, loaded, now } = useProgress();
   const [heard, setHeard] = useState(false);
   const [played, setPlayed] = useState(false);
   const testBrick = brick(tier.soundTestBrickId);
@@ -42,9 +43,34 @@ export default function Anteroom() {
     router.replace('/antre');
   };
 
-  if (!loaded) return <View style={styles.screen} />;
+  if (!loaded || !engine) return <View style={styles.screen} />;
   const bossNode = tier.nodes[tier.nodes.length - 1];
-  if (nodeStatus(tier, progress, bossNode) === 'locked') return <Redirect href="/" />;
+  if (nodeStatus(tier, progress, bossNode) === 'locked') {
+    const lock = bossLock(cardList(progress), allNodesDone(tier, progress), engine, now());
+    return (
+      <SafeAreaView style={styles.screen}>
+        <ScrollView contentContainerStyle={styles.content}>
+          <Text style={styles.kicker}>{`Palier ${tier.order} · ${tier.title}`}</Text>
+          <Text accessibilityRole="header" style={styles.title}>
+            La Porte est fermée
+          </Text>
+          <Text style={styles.advice} testID="door-advice">{doorAdvice(lock)}</Text>
+          <View style={styles.block}>
+            <Text style={styles.heading}>Pour affronter le Gardien</Text>
+            <Condition done={lock.nodesDone} testID="door-nodes" label="Terminer les 12 nœuds de la carte" />
+            <Condition
+              done={lock.socle >= SOCLE_FOR_BOSS}
+              testID="door-socle"
+              label={`Garder un socle d'au moins ${Math.round(SOCLE_FOR_BOSS * 100)} %`}
+              detail={`Le tien : ${Math.round(lock.socle * 100)} %`}
+            />
+          </View>
+          <PrimaryButton label="Partir 5 minutes" testID="door-expedition" onPress={() => router.push('/expedition')} />
+          <QuietButton label="Retour" testID="to-map" onPress={goToMap} />
+        </ScrollView>
+      </SafeAreaView>
+    );
+  }
 
   const playTest = async () => {
     await audio.play(sayClip('voiceA', testBrick.en));
@@ -128,6 +154,18 @@ export default function Anteroom() {
   );
 }
 
+function Condition(props: { done: boolean; label: string; detail?: string; testID: string }) {
+  return (
+    <View style={styles.condition} testID={props.testID}>
+      <Text style={[styles.mark, { color: props.done ? colors.good : colors.flame }]}>{props.done ? 'Fait' : 'À faire'}</Text>
+      <View style={styles.settingText}>
+        <Text style={styles.rule}>{props.label}</Text>
+        {props.detail ? <Text style={styles.hint}>{props.detail}</Text> : null}
+      </View>
+    </View>
+  );
+}
+
 function Setting(props: { label: string; hint?: string; value: boolean; testID: string; onChange: (v: boolean) => void }) {
   return (
     <View style={styles.setting}>
@@ -154,5 +192,8 @@ const styles = StyleSheet.create({
   ok: { color: colors.good, fontSize: 14 },
   soundRow: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 4 },
   setting: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  advice: { color: colors.gold, fontSize: 17, lineHeight: 25 },
+  condition: { flexDirection: 'row', gap: 12, alignItems: 'flex-start' },
+  mark: { fontSize: 13, fontWeight: '700', width: 46, marginTop: 3 },
   settingText: { flex: 1 },
 });

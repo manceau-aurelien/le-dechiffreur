@@ -6,7 +6,6 @@ const DAY_MS = 86_400_000;
 
 export const SOCLE_FOR_NEW_NODE = 0.7;
 export const SOCLE_FOR_BOSS = 0.8;
-export const CONSOLIDATED_FOR_BOSS = 0.8;
 const SOCLE_R = 0.7;
 const DUE_R = 0.9;
 const LISTEN_RATIO_MIN = 0.7;
@@ -115,21 +114,19 @@ export function computeSocle(cards: SrsCard[], engine: SrsEngine, now: number): 
   return cards.filter((c) => engine.retrievability(c.state, now) >= SOCLE_R).length / cards.length;
 }
 
-/** Part des éléments réussis sur au moins 2 jours calendaires différents. */
-export function consolidatedShare(cards: SrsCard[]): number {
-  if (!cards.length) return 0;
-  return cards.filter((c) => c.distinctSuccessDays >= 2).length / cards.length;
-}
-
 export const needsListening = (c: SrsCard) => c.listenTotal >= LISTEN_MIN_ATTEMPTS && c.listenOk / c.listenTotal < LISTEN_RATIO_MIN;
 
+/** La Porte s'ouvre quand le parcours est terminé et que le socle tient, dès le jour même. */
 export function bossLock(cards: SrsCard[], nodesDone: boolean, engine: SrsEngine, now: number) {
   const socle = computeSocle(cards, engine, now);
-  const consolidated = consolidatedShare(cards);
-  return {
-    socle,
-    consolidated,
-    nodesDone,
-    open: nodesDone && socle >= SOCLE_FOR_BOSS && consolidated >= CONSOLIDATED_FOR_BOSS,
-  };
+  return { socle, nodesDone, open: nodesDone && socle >= SOCLE_FOR_BOSS };
+}
+
+export type BossLock = ReturnType<typeof bossLock>;
+
+/** Ce que le joueur doit faire pour ouvrir la Porte, en une phrase. */
+export function doorAdvice(lock: BossLock): string {
+  if (!lock.nodesDone) return 'Termine d’abord les 12 nœuds de la carte.';
+  if (lock.socle < SOCLE_FOR_BOSS) return 'Tes briques se sont usées : pars 5 minutes pour les entretenir.';
+  return 'La Porte est prête à s’ouvrir.';
 }
