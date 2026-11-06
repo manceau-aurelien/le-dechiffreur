@@ -1,6 +1,6 @@
 {
-  "voiceA":   { "role": "Lecons (feminine, en-US)",  "sapi": { "name": "Microsoft Zira Desktop",  "pitch": "default" }, "azure": "en-US-JennyNeural" },
-  "voiceB":   { "role": "Lecons (masculine, en-US)", "sapi": { "name": "Microsoft David Desktop", "pitch": "default" }, "azure": "en-US-GuyNeural" },
-  "guardian": { "role": "Le Gardien (grave, en-US)", "sapi": { "name": "Microsoft David Desktop", "pitch": "low" },     "azure": "en-US-DavisNeural" },
-  "anna":     { "role": "Anna (feminine, en-US)",    "sapi": { "name": "Microsoft Zira Desktop",  "pitch": "default" }, "azure": "en-US-AriaNeural" }
+  "voiceA":   { "role": "Lecons (feminine, en-US)",  "kokoro": { "voice": "af_heart",   "speed": 0.8 }, "sapi": { "name": "Microsoft Zira Desktop",  "pitch": "default" }, "azure": "en-US-JennyNeural" },
+  "voiceB":   { "role": "Lecons (masculine, en-US)", "kokoro": { "voice": "am_puck",    "speed": 0.8 }, "sapi": { "name": "Microsoft David Desktop", "pitch": "default" }, "azure": "en-US-GuyNeural" },
+  "guardian": { "role": "Le Gardien (en-US)",        "kokoro": { "voice": "am_michael", "speed": 0.72 }, "sapi": { "name": "Microsoft David Desktop", "pitch": "default" }, "azure": "en-US-DavisNeural" },
+  "anna":     { "role": "Anna (feminine, en-US)",    "kokoro": { "voice": "af_bella",   "speed": 0.8 }, "sapi": { "name": "Microsoft Zira Desktop",  "pitch": "default" }, "azure": "en-US-AriaNeural" }
 }

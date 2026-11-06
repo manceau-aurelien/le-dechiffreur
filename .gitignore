@@ -42,3 +42,6 @@ yarn-error.*
 
 # Réglages locaux de l'assistant
 .claude/
+
+# Échantillons d’écoute des voix
+tools/voice/samples/

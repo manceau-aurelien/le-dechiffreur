@@ -1,0 +1,9 @@
+{
+  "name": "dechiffreur-voice",
+  "private": true,
+  "description": "Outil de génération des voix (Kokoro), séparé de l'application : rien de tout cela n'est embarqué.",
+  "type": "module",
+  "dependencies": {
+    "kokoro-js": "1.2.1"
+  }
+}
